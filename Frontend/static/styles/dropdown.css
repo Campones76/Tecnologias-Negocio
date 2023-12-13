@@ -1,0 +1,53 @@
+
+
+/* Style the sidenav links and the dropdown button*/
+.dropdown-btn {
+  border: none;
+  background: none;
+  width: 90%;
+  cursor: pointer;
+  color: #1E1E1E;
+  font-family: Inter;
+  font-size: 27px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: normal;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #1E1E1E;
+}
+
+#linha {
+  border-bottom: 5px solid #364958;
+  color: #364958;
+  font-weight: 700;
+  line-height: bold;
+  width: 200px;
+  border-radius: 20px;
+  position: relative;
+  padding-left: 230px;
+}
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+  font-weight: bold;
+  
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  color: #1E1E1E;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #CAE4CB;
+  padding-left: 8px;
+  height: 150px;
+  border-radius: 20px;
+}
