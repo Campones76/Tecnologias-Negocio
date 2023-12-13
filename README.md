@@ -2,7 +2,7 @@
 
 ## Project Description
 
-ItOnDemand is a project developed for our database class, focusing on the functionalities of a gun shop. The system includes features such as background checks for clients, inventory management, and more.
+ItOnDemand is a project developed for our database class, focusing on the functionalities of an IT store.
 
 ## Technologies Used
 
