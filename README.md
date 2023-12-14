@@ -17,7 +17,7 @@ To run and contribute to this project, ensure you have the following tools and d
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Python](https://www.python.org/) (Install version 3.9.8)
 - [Flask](https://flask.palletsprojects.com/en/3.0.x/) (Install using `pip install Flask`)
-- [mysql.connector](https://www.mysql.com/products/connector/) (Install using `pip install mysql.connector`)
+- [mysql.connector](https://dev.mysql.com/doc/connector-python/en/) (Install using `pip install mysql.connector`)
 
 ### Setting Up the Development Environment
 
@@ -27,7 +27,7 @@ To run and contribute to this project, ensure you have the following tools and d
    git clone https://github.com/your-username/Tecnologias-Negocio.git
    cd Tecnologias-Negocio
 
-2. Installing dependecies:
+2. Installing dependecies (If you get an error in this step change pip to pip3):
    ```bash
    pip install -r requirements.txt
    
