@@ -35,7 +35,7 @@
   font-size: 20px; /* Increased text to enable scrolling */
   padding: 0px 10px;
   font-weight: bold;
-  
+
 }
 
 /* Add an active class to the active dropdown button */
@@ -50,4 +50,20 @@
   padding-left: 8px;
   height: 150px;
   border-radius: 20px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 767px) {
+  .main {
+    margin-left: 0; /* Adjust margin for smaller screens */
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+
+  #linha {
+    padding-left: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .dropdown-container {
+    height: auto; /* Adjust height for smaller screens */
+  }
 }
