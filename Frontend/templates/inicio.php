@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <title>Main menu</title>
 
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/dropdown.css">
+    <link rel="stylesheet" href="/static/styles/main.css">
+    <link rel="stylesheet" href="/static/styles/dropdown.css">
     <!-- bootstrap css -->
     <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -21,7 +21,7 @@
     <div class="container">
         <nav class="main-menu" style="height: 695px; width:250px;">
             <ul>
-                <img src="imgs/LOGO_PROJETO_TEN.png" style="padding-left: 10px; width: 200px; height: 100px;" alt="Logo">
+                <img src="/static/images/LOGO_PROJETO_TEN.png" style="padding-left: 10px; width: 200px; height: 100px;" alt="Logo">
                 <span class="nav-text" style="color: #364958; font-family: Inter; font-size: 20px;font-style: normal;font-weight: 700;line-height: normal; width:100%;text-align:center; display: inline-block;">
                     IT on Demand
                 </span>
@@ -47,7 +47,7 @@
                <div class="dropdown-container">
                  <ul class="nav nav-sidebar">
                   <li>
-                    <i class="fa fa-laptop"><a href="computadores.php" class="links-dropdown" style="padding-left:10px;">Computers</a></i><p>
+                    <i class="fa fa-laptop"><a href={{ url_for('computers.index') }} class="links-dropdown" style="padding-left:10px;">Computers</a></i><p>
                     <i class="fa fa-keyboard-o" style="padding-left:1px;"><a href="#" class="links-dropdown" style="padding-left:12px;">Keybords</a></i><p>
                     <i class="fa fa-mouse" style="padding-left:3px;"><a href="#" class="links-dropdown" style="padding-left:16px;">Mouses</a></i><p>
                     <i class="fa fa-desktop"><a href="#" class="links-dropdown" style="padding-left:12px;">Screen's</a></i>

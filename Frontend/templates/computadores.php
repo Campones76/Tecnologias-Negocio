@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <title>Main menu</title>
 
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/dropdown.css">
+    <link rel="stylesheet" href="/static/styles/main.css">
+    <link rel="stylesheet" href="/static/styles/dropdown.css">
     <!-- bootstrap css -->
     <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -21,7 +21,7 @@
     <div class="container">
         <nav class="main-menu" style="height: 695px; width:250px;">
             <ul>
-                <img src="imgs/LOGO_PROJETO_TEN.png" style="padding-left: 10px; width: 200px; height: 100px;" alt="Logo">
+                <img src="/static/images/LOGO_PROJETO_TEN.png" style="padding-left: 10px; width: 200px; height: 100px;" alt="Logo">
                 <span class="nav-text" style="color: #364958; font-family: Inter; font-size: 20px;font-style: normal;font-weight: 700;line-height: normal; width:100%;text-align:center; display: inline-block;">
                     IT on Demand
                 </span>
@@ -106,20 +106,20 @@
 
 <div style="display: flex; flex-direction: row; width:100%; margin-top:30px;">
   <div id="containerimg" style="margin-left:300px;">
-    <img src="imgs/COMPUTADOR 1.jpg" style=" width: 320px; height: 300px; padding-top:30px; border-radius: 10px;border: 4px solid #CAE4CB;">
+    <img src="/static/images/COMPUTADOR 1.jpg" style=" width: 320px; height: 300px; padding-top:30px; border-radius: 10px;border: 4px solid #CAE4CB;">
     <p>Lenovo IdeaPad Slim 3 15IAH8 Intel Core i5-12450H/16GB/512GB SSD/15.6</p>
     <p>Price:</p>
     <p style="color: #87BBA2;font-family: Jockey One;font-size: 24px;font-style: normal;font-weight: 400;line-height: normal;">608,60€</p>
 
   </div>
   <div id="containerimg" style="margin-left:100px;">
-    <img src="imgs/COMPUTADOR 2.jpg" style=" width: 320px; height: 300px; padding-top:30px; border-radius: 10px;border: 4px solid #CAE4CB;">
+    <img src="/static/images/COMPUTADOR 2.jpg" style=" width: 320px; height: 300px; padding-top:30px; border-radius: 10px;border: 4px solid #CAE4CB;">
     <p style="padding-right:20px;">ASUS TUF Gaming F15 Intel Core i5-11400H/16GB/512GB SSD/RTX 2050</p>
     <p>Price:</p>
     <p style="color: #87BBA2;font-family: Jockey One;font-size: 24px;font-style: normal;font-weight: 400;line-height: normal;">635,36€</p>
   </div>
   <div id="containerimg" style="margin-left:100px;">
-    <img src="imgs/COMPUTADOR 3.jpg" style=" width: 320px; height: 300px; padding-top:30px; border-radius: 10px;border: 4px solid #CAE4CB;">
+    <img src="/static/images/COMPUTADOR 3.jpg" style=" width: 320px; height: 300px; padding-top:30px; border-radius: 10px;border: 4px solid #CAE4CB;">
     <p style="padding-right:20px;">Macbook Air APPLE Silver (Apple M1 - RAM: 8 GB - 256 GB SSD - 7-Core GPU)</p>
     <p>Price:</p>
     <p style="color: #87BBA2;font-family: Jockey One;font-size: 24px;font-style: normal;font-weight: 400;line-height: normal;">999,99€</p>
