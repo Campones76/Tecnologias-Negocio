@@ -131,7 +131,8 @@ nav li {
 }
 
 
-@media screen and (min-width: 1824px) {
+/* Large screens */
+@media screen and (min-width: 1200px) {
   .main-menu {
     width: 300px;
   }
@@ -142,31 +143,31 @@ nav li {
 }
 
 /* Medium screens */
-@media screen and (max-width: 1823px) and (min-width: 1024px) {
+@media screen and (max-width: 1199px) and (min-width: 768px) {
   .main-menu {
-    width: 200px; /* Adjust the width for medium screens */
+    width: 200px;
   }
 
   .main-menu li {
-    width: 160px; /* Adjust the width for medium screens */
+    width: 160px;
   }
 }
 
 /* Small screens */
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 767px) {
   .main-menu {
-    width: 100%; /* Full width for small screens */
+    width: 100%;
   }
 
   .main-menu li {
-    width: 100%; /* Full width for small screens */
+    width: 100%;
   }
 
   .main-menu ul li.dropdown:hover .dropdown-menu {
-    display: none; /* Hide dropdown on small screens */
+    display: none;
   }
 
   .no-touch .scrollable.hover:hover {
-    overflow-y: hidden; /* Disable hover effect on small screens */
+    overflow-y: hidden;
   }
 }
