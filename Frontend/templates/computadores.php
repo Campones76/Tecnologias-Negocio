@@ -28,7 +28,7 @@
                 <div id="linha">
                 </div>
                 <li style="padding-top: 50px;">
-                    <a href="inicio.php">
+                    <a href={{ url_for('home.index') }}>
                         <i class="fa fa-home" ></i>
                         <span class="nav-text">
                             Home Page
@@ -47,7 +47,7 @@
                <div class="dropdown-container">
                  <ul class="nav nav-sidebar">
                   <li>
-                    <i class="fa fa-laptop"><a href="computadores.php" class="links-dropdown" style="padding-left:10px;">Computers</a></i><p>
+                    <i class="fa fa-laptop"><a href={{ url_for('computers.index') }} class="links-dropdown" style="padding-left:10px;">Computers</a></i><p>
                     <i class="fa fa-keyboard-o" style="padding-left:1px;"><a href="#" class="links-dropdown" style="padding-left:12px;">Keybords</a></i><p>
                     <i class="fa fa-mouse" style="padding-left:3px;"><a href="#" class="links-dropdown" style="padding-left:16px;">Mouses</a></i><p>
                     <i class="fa fa-desktop"><a href="#" class="links-dropdown" style="padding-left:12px;">Screen's</a></i>
