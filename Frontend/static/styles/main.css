@@ -122,9 +122,51 @@ nav {
   user-select: none;
 }
 
+
 nav ul,
 nav li {
   outline: 0;
   margin: 0;
   padding: 10px;
+}
+
+
+@media screen and (min-width: 1824px) {
+  .main-menu {
+    width: 300px;
+  }
+
+  .main-menu li {
+    width: 260px;
+  }
+}
+
+/* Medium screens */
+@media screen and (max-width: 1823px) and (min-width: 1024px) {
+  .main-menu {
+    width: 200px; /* Adjust the width for medium screens */
+  }
+
+  .main-menu li {
+    width: 160px; /* Adjust the width for medium screens */
+  }
+}
+
+/* Small screens */
+@media screen and (max-width: 1023px) {
+  .main-menu {
+    width: 100%; /* Full width for small screens */
+  }
+
+  .main-menu li {
+    width: 100%; /* Full width for small screens */
+  }
+
+  .main-menu ul li.dropdown:hover .dropdown-menu {
+    display: none; /* Hide dropdown on small screens */
+  }
+
+  .no-touch .scrollable.hover:hover {
+    overflow-y: hidden; /* Disable hover effect on small screens */
+  }
 }
