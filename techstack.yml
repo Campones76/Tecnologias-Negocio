@@ -2,7 +2,7 @@ repo_name: Campones76/Tecnologias-Negocio
 report_id: 8a80b7a173e1f7742154437b8172c554
 version: 0.1
 repo_type: Public
-timestamp: '2023-12-28T02:37:18+00:00'
+timestamp: '2024-01-05T08:14:45+00:00'
 requested_by: Campones76
 provider: github
 branch: main
@@ -16,6 +16,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/Campones76/Tecnologias-Negocio
   detection_source: Repo Metadata
 - name: Hack
   description: A programming language for HHVM that interoperates seamlessly with
@@ -26,6 +27,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1208/download.png
+  detection_source_url: https://github.com/Campones76/Tecnologias-Negocio
   detection_source: Repo Metadata
 - name: Python
   description: A clear and powerful object-oriented programming language, comparable
@@ -36,6 +38,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/993/pUBY5pVj.png
+  detection_source_url: https://github.com/Campones76/Tecnologias-Negocio
   detection_source: Repo Metadata
 - name: Git
   description: Fast, scalable, distributed revision control system
@@ -45,6 +48,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/Campones76/Tecnologias-Negocio
   detection_source: Repo Metadata
 - name: PyPI
   description: A repository of software for the Python programming language
@@ -54,6 +58,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Hosted Package Repository
   image_url: https://img.stackshare.io/service/12572/-RIWgodF_400x400.jpg
+  detection_source_url: https://github.com/Campones76/Tecnologias-Negocio/blob/main/requirements.txt
   detection_source: requirements.txt
   last_updated_by: Gabriel.F
   last_updated_on: 2023-12-14 10:37:57.000000000 Z
