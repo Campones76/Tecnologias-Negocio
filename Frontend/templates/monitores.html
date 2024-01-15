@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Main menu</title>
+    <title>Screen's</title>
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/dropdown.css">
@@ -15,8 +15,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
-
-
 <body>
     <div class="container">
         <nav class="main-menu" style="height: 695px; width:250px;">
@@ -28,7 +26,7 @@
                 <div id="linha">
                 </div>
                 <li style="padding-top: 50px;">
-                    <a href="utilizadores.php">
+                    <a href="inicio.php">
                         <i class="fa fa-home" ></i>
                         <span class="nav-text">
                             Home Page
@@ -94,10 +92,37 @@
                   <i style="color: #1E1E1E;font-family: Inter;font-size: 15px;font-style: normal;font-weight: 500;line-height: normal;padding-left:150px;">@TEN2023</i>
                 </li>
         </nav>
+</div>
+<div class="banner">
+  <p style="font-size:40px; padding-top:10px; color: #364958;font-family: Jockey One; padding-left:20px;"><i class="fa fa-boxes-stacked" style="font-size:30px;" ></i>Products-Screen's<i class="fa fa-desktop" style="font-size:30px;"></i></p>
+</div>
 
+<div id="divBusca">
+  <input type="text" id="txtBusca" placeholder="Buscar..."/>
+  <i class="fa fa-magnifying-glass" style="font-size:30px; padding-top:4px;"></i>
+</div>
 
+<div style="display: flex; flex-direction: row; width:100%; margin-top:30px;">
+  <div id="containerimg" style="margin-left:300px;">
+    <img src="imgs/ECRA 1.jpeg" style=" width: 400px; height: 300px; padding-top:30px; border-radius: 10px;border: 4px solid #CAE4CB;">
+    <p>Alurin CoreVision 24 FHD 23.8" LED IPS FullHD 100Hz</p>
+    <p>Price:</p>
+    <p style="color: #87BBA2;font-family: Jockey One;font-size: 24px;font-style: normal;font-weight: 400;line-height: normal;">111,81€</p>
 
-
+  </div>
+  <div id="containerimg" style="margin-left:100px;">
+    <img src="imgs/ECRA 2.jpg" style=" width: auto; height: 300px; max-width: 300px; padding-top:30px; border-radius: 10px;border: 4px solid #CAE4CB;">
+    <p style="padding-right:20px;">Newskill Icarus IC27I4K144 27" LED IPS UltraHD 4K 144Hz</p>
+    <p>Price:</p>
+    <p style="color: #87BBA2;font-family: Jockey One;font-size: 24px;font-style: normal;font-weight: 400;line-height: normal;">508,25€</p>
+  </div>
+  <div id="containerimg" style="margin-left:100px;">
+    <img src="imgs/ECRA 3.jpg" style=" width: 300px; height: 300px; padding-top:30px; border-radius: 10px;border: 4px solid #CAE4CB;">
+    <p style="padding-right:20px;">Nilox NXM24FHD01 24" LED FullHD 75Hz</p>
+    <p>Price:</p>
+    <p style="color: #87BBA2;font-family: Jockey One;font-size: 24px;font-style: normal;font-weight: 400;line-height: normal;">91,39€</p>
+  </div>
+</div>
 
     <div class="container">
         <form action="php/login.php" method="POST">

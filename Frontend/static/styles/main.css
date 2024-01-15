@@ -102,6 +102,115 @@
   text-decoration: none; /* Remover a linha de sublinhado quando o cursor está sobre o link */
 }
 
+.container_historico {
+
+            width: 235px;
+            height: 201px;
+            border-radius: 10px;
+            background: #364958;
+            flex-shrink: 0;
+            padding: 20px;
+            color: white;
+            margin-top: 30px;
+            margin-left: 25%;
+}
+
+.container_historico p{
+
+        color: #CAE4CB;
+        font-family: Jockey One;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+}
+
+
+.container_cart {
+
+            width: 325px;
+            height: 301px;
+            border-radius: 10px;
+            background: #CAE4CB;
+            flex-shrink: 0;
+            padding: 20px;
+            color: white;
+            margin-top: 80px;
+            margin-left: 5%;
+}
+
+.container_cart p{
+
+        color: #57828B;
+        font-family: Jockey One;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+}
+
+.container_eletronic {
+
+            width: 300px;
+            height: 100px;
+            border-radius: 10px;
+            background: #87BBA2;
+            flex-shrink: 0;
+            padding: 10px;
+            color: white;
+            margin-top: 80px;
+            margin-left: 3%;
+}
+
+.container_eletronic p{
+
+        color: #364958;
+        font-family: Jockey One;
+        font-size: 23px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: normal;
+}
+
+.texto_produtos {
+  height: 200px;
+  color:#87BBA2;
+  font-family: Jockey One;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+}
+
+table {
+            border-collapse: collapse;
+            width: 76%;
+            margin-left: 20%;
+        }
+
+        th, td {
+            border: 4px solid #CAE4CB;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th, td {
+            background: rgba(135, 187, 162, 0.00);
+            color: #000;
+            font-family: Jockey One;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+        }
+
+        td:nth-child(2) {
+            height: 50px; /* Adjust the height as needed */
+        }
+
+
 .main-menu .nav-icon {
   position: relative;
   display: table-cell;
@@ -172,6 +281,55 @@ nav li {
   outline: 0;
   margin: 0;
   padding: 10px;
+}
+
+.rate {
+
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:35px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+.popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #FFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 999;
+
 }
 
 
