@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+
+    <link rel="stylesheet" href="../static/styles/main.css">
+    <link rel="stylesheet" href="../static/styles/dropdown.css">
+    <!-- bootstrap css -->
+    <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="main-menu" style="height: 695px; width:250px;">
+            <ul>
+                <img src="../static/images/LOGO_PROJETO_TEN.png" style="padding-left: 10px; width: 200px; height: 100px;" alt="Logo">
+                <span class="nav-text" style="color: #364958; font-family: Inter; font-size: 20px;font-style: normal;font-weight: 700;line-height: normal; width:100%;text-align:center; display: inline-block;">
+                    IT on Demand
+                </span>
+                <div id="linha">
+                </div>
+                <li style="padding-top: 50px;">
+                    <a href="inicio.html">
+                        <i class="fa fa-home" ></i>
+                        <span class="nav-text">
+                            Home Page
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-btn">
+                        <i class="fa fa-boxes-stacked" ></i>
+                        <span class="nav-text">
+                            Products
+                            <i class="fa fa-caret-down" style="position:absolute;top:10%;right:50px"></i>
+                        </span>
+                    </a>
+                </li>
+               <div class="dropdown-container">
+                 <ul class="nav nav-sidebar">
+                  <li>
+                    <i class="fa fa-laptop"><a href="admin_computadores.html" class="links-dropdown" style="padding-left:10px;">Computers</a></i><p>
+                    <i class="fa fa-keyboard-o" style="padding-left:1px;"><a href="admin_teclados.html" class="links-dropdown" style="padding-left:12px;">Keybords</a></i><p>
+                    <i class="fa fa-mouse" style="padding-left:3px;"><a href="admin_ratos.html" class="links-dropdown" style="padding-left:16px;">Mouses</a></i><p>
+                    <i class="fa fa-desktop"><a href="admin_monitores.html" class="links-dropdown" style="padding-left:12px;">Screen's</a></i>
+                  </li>
+                </u>
+                </div>
+                <li>
+                    <a href="perfil.html">
+                        <i class="fa fa-user"></i>
+                        <span class="nav-text ">
+                            Profile
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="utilizador_eventos.php">
+                        <i class="fa fa-users"></i>
+                        <span class="nav-text">
+                            About Us
+                        </span>
+                    </a>
+                </li>
+            </ul>
+                <li style="position: absolute; left: 0; bottom: 0;">
+                  <div style="background-color: #CAE4CB; width:90%; height:100px; border-radius: 8px; padding-left:10px;">
+                    <h4 style="padding-top:10px;">Contact Us By:</h4>
+                      <p>
+                        <strong>Email:</strong>
+                        <a href="#" style="font-size: 15px; font-weight:500;">itondemand@gmail.com</a>
+                      </p>
+                      <p>
+                        <strong>Phone:</strong>
+                        +222 222 222
+                      </p>
+                  </div>
+                  <i style="color: #1E1E1E;font-family: Inter;font-size: 15px;font-style: normal;font-weight: 500;line-height: normal;padding-left:150px;">@TEN2023</i>
+                </li>
+        </nav>
+</div>
+
+
+<div class="banner" style="width:20%;">
+  <p style="font-size:35px; padding-top:10px; color: #364958;font-family: Jockey One; padding-left:10px; font-weight:bold;"><i class="fa fa-folder" style="font-size:30px;" ></i>+INFO Order</p>
+</div>
+
+<div style="display: flex">
+
+  <div class="container_admin_order" style="margin-left:20%; width: 165px;">
+        <p>Id Buyer:</p>
+        <p><span style="color: #364958;">1001</span></p>
+  </div>
+  <div class="container_admin_order" style="margin-left:5%; width: 235px;">
+        <p>Order Number:</p>
+        <p><span style="color: #364958;">100100</span></p>
+  </div>
+  <div class="container_admin_order" style="margin-left:5%; width: 195px;">
+        <p>State:</p>
+        <p><span style="color: #364958;">Delivered</span></p>
+  </div>
+  <div class="container_admin_order" style="margin-top: 0px; margin-left:5%; width: 325px; height:180px;">
+        <p style="text-align:left">Adress:</p>
+        <p><span style="color: #364958;">Av. dos Descobrimentos 333, 4400-103 V.N. Gaia</span></p>
+  </div>
+
+</div>
+
+ <table style="margin-left: 19%;width: 70%;margin-top:40px;">
+  <thead>
+    <tr>
+      <th style="text-align:center;">Nº</th>
+      <th style="text-align:center;">Product</th>
+      <th style="text-align:center;">Amount</th>
+      <th style="text-align:center;">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Newskill EOS</td>
+      <td>1</td>
+      <td>33,49 €</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Lenovo IdeaPad</td>
+      <td>1</td>
+      <td>608,60 €</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="3" style="border:none;padding-left:650px">Total:</td>
+      <td>642,09 €</td>
+    </tr>
+  </tfoot>
+</table>
+
+
+    <div class="container">
+        <form action="php/login.php" method="POST">
+        </form>
+    </div>
+    <script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+
+        var dropdownContent =  document.getElementsByClassName("dropdown-container");
+        if (dropdownContent[0].style.display === "block") {
+          dropdownContent[0].style.display = "none";
+        } else {
+          dropdownContent[0].style.display = "block";
+        }
+      });
+    }
+
+    $(".nav a").on("click", function() {
+      $(".nav").find(".active").removeClass("active");
+      $(this).parent().addClass("active");
+    });
+
+    </script>
+
+    <!-- bootstrap js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

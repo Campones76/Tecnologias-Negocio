@@ -139,6 +139,28 @@
             margin-left: 5%;
 }
 
+.container_admin_order {
+
+            height: 101px;
+            border-radius: 10px;
+            background: #CAE4CB;
+            flex-shrink: 0;
+            padding: 10px;
+            color: white;
+            margin-top: 50px;
+}
+
+.container_admin_order p{
+
+    color: #57828B;
+    font-family: Jockey One;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    text-align: center;
+}
+
 .container_cart p{
 
         color: #57828B;
