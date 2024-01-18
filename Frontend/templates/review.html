@@ -26,7 +26,7 @@
                 <div id="linha">
                 </div>
                 <li style="padding-top: 50px;">
-                    <a href="inicio.php">
+                    <a href="{{url_for('home.index')}}">
                         <i class="fa fa-home" ></i>
                         <span class="nav-text">
                             Home Page
@@ -151,7 +151,7 @@
 
     var popup = document.getElementById('popup');
          popup.style.display = 'block';
-     }
+      }
 
      function closePopup() {
          var popup = document.getElementById('popup');
