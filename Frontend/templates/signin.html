@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login Form</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='/styles/styles.css') }}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    </head>
+    <body>
+        <div class="login">
+            <h1>LOGIN</h1>
+            <div class="links">
+                <a href="{{ url_for('SigninView.login') }}" class="active">LOGIN</a>
+                <a href="{{ url_for('SignupView.register') }}">REGISTER</a>
+            </div>
+            <form action="" method="post">
+                <label for="username">
+                    <i class="fa fa-user"></i>
+                </label>
+                <input type="text" name="username" placeholder="Username" id="username" required>
+                <label for="password">
+                    <i class="fa fa-lock"></i>
+                </label>
+                <input type="password" name="password" placeholder="Password" id="password" required>
+                <div class="msg">{{ msg }}</div>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </body>
+</html>

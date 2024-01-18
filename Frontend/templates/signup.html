@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>REGISTER</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='/styles/styles.css') }}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"></script>
+    </head>
+    <body>
+        <div class="register">
+            <h1>Register</h1>
+            <div class="links">
+                <a href="{{ url_for('SigninView.login') }}">LOGIN</a>
+                <a href="{{ url_for('SignupView.register') }}" class="active">REGISTER</a>
+            </div>
+            <form action="{{ url_for('SignupView.register') }}" method="post" autocomplete="off">
+                <label for="username">
+                    <i class="fa fa-user"></i>
+                </label>
+                <input type="text" name="username" placeholder="Username" id="username" required>
+                <label for="email">
+                    <i class="fa fa-envelope-open"></i>
+                </label>
+                <input type="email" name="email" placeholder="Email" id="email" required>
+                <label for="password">
+                    <i class="fa fa-lock"></i>
+                </label>
+                <input type="password" name="password" placeholder="Password" id="password" required>
+                <label for="fullname">
+                    <i class="fa fa-user"></i>
+                </label>
+                <input type="text" name="fullname" placeholder="Full Name" id="fullname" required>
+                <label for="dob">
+                    <i class="fa fa-calendar"></i>
+                </label>
+                <input type="date" name="dob" placeholder="Date of Birth" id="dob" required>
+                <label for="address">
+                    <i class="fa fa-home"></i>
+                </label>
+                <input type="text" name="address" placeholder="Home Address" id="address" required>
+                <label for="contact">
+                    <i class="fa fa-phone"></i>
+                </label>
+                <div class="input-wrapper">
+                    <input type="hidden" name="countryCode" id="countryCode">
+                    <input type="tel" name="contact" placeholder="Contact" id="contact" required>
+                </div>                
+                <label for="tin">
+                    <i class="fa fa-id-card"></i>
+                </label>
+                <input type="text" name="tin" placeholder="NIF" id="tin" required>
+                <div class="msg">{{ msg }}</div>
+                <input type="submit" value="Register">
+            </form>
+        </div>
+        <script>
+            var input = document.querySelector("#contact");
+            var iti = window.intlTelInput(input, {
+                // any initialisation options go here
+                initialCountry: "pt"
+            });
+
+            // Add an event listener for form submission
+            document.querySelector("form").addEventListener("submit", function() {
+                // Get the selected country data
+                var countryData = iti.getSelectedCountryData();
+                // Set the value of the hidden input field to the dial code
+                document.querySelector("#countryCode").value = countryData.dialCode;
+            });
+        </script>
+    </body>
+</html>

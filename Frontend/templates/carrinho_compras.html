@@ -101,36 +101,32 @@
 
 <div style="display:flex">
 
- <table style="margin-left: 19%;width: 50%;margin-top:5%;">
-  <thead>
-    <tr>
-      <th style="text-align:center;">Nº</th>
-      <th style="text-align:center;">Product</th>
-      <th style="text-align:center;">Amount</th>
-      <th style="text-align:center;">Price</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>Newskill EOS</td>
-      <td>1</td>
-      <td>33,49 €</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Lenovo IdeaPad</td>
-      <td>1</td>
-      <td>608,60 €</td>
-    </tr>
-  </tbody>
-  <tfoot>
-    <tr>
-      <td colspan="3" style="border:none;padding-left:500px">Total:</td>
-      <td>642,09 €</td>
-    </tr>
-  </tfoot>
-</table>
+  <table style="margin-left: 19%;width: 50%;margin-top:5%;">
+    <thead>
+      <tr>
+        <th style="text-align:center;">Nº</th>
+        <th style="text-align:center;">Product</th>
+        <th style="text-align:center;">Amount</th>
+        <th style="text-align:center;">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- {% for product in products %} -->
+      <tr>
+        <td><!--{{ loop.index }}--></td>
+        <td><!--{{ product[1] }}--></td> <!-- Assuming name is the second field -->
+        <td><!--{{ product[2] }}--></td> <!-- Assuming quantity is the third field -->
+        <td><!--{{ product[3] }}--> €</td> <!-- Assuming price is the fourth field -->
+      </tr>
+      <!--{% endfor %}-->
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3" style="border:none;padding-left:500px">Total:</td>
+        <td><!--{{ products|sum(attribute=3) }} -->€</td> <!-- Summing the price field -->
+      </tr>
+    </tfoot>
+  </table>
 
 <div class="container_cart">
       <p>You can also <span style="color: #364958;">BUY</span> this!</p>

@@ -1,18 +1,31 @@
 from flask import Flask
 from backend.views.home import *
+from backend.views.SigninView import *
+from backend.views.SignupView import *
 from backend.views.computers import *
 from backend.views.mouse import *
 from backend.views.keyboards import *
 from backend.views.displays import *
+from backend.views.checkout import *
 
 app = Flask(__name__, template_folder='../frontend/templates', static_folder='../frontend/static')
 
+
+
+SECRET_KEY = "5cc130ab569ac767ea9a5a272747592658aedfe069b91a9ab2f8d4222e97861ddddec6639feac050e6efab0274f37122617195df39b2b296881d356ec3402740d7841af0beb99dfff6fce567d124ae62626950f3ee4489dd565c814c82b2cc38bd4924302bb395ef4fb2696252eb0803a9b3f86fe2e927843aabe0b12859e6b7cada48cdb9975489f588839648ff61ab2703456f8de8e99133578640d\/-!63c63ffb776-!"
+
+app.config['SECRET_KEY'] = SECRET_KEY
+
 # Register Blueprints
 app.register_blueprint(home_bp)
+app.register_blueprint(signin_bp)
+app.register_blueprint(signup_bp)
 app.register_blueprint(computers_bp)
 app.register_blueprint(mouse_bp)
 app.register_blueprint(keyboards_bp)
 app.register_blueprint(displays_bp)
+app.register_blueprint(carrinho_bp)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
