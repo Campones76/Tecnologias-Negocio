@@ -11,20 +11,20 @@ bcrypt = Bcrypt()
 signin_bp = Blueprint('SigninView', __name__)
 
 class User(UserMixin):
-    def __init__(self, id, Staff):
+    def __init__(self, id, Admin):
         self.id = id
-        self.Staff = Staff
+        self.Admin = Admin
 
 @login_manager.user_loader
 def load_user(user_id):
     conn = pyodbc.connect(connection_string)
     cursor = conn.cursor()
-    cursor.execute('SELECT * FROM dbo.Customer WHERE CustomerID = ?', (user_id,))
-   # cursorstaff = conn.cursor()
-    #cursorstaff.execute('SELECT staff FROM dbo.Admin WHERE IdAdmin = ?', (user_id,))
+    cursor.execute('SELECT * FROM dbo.[User] WHERE ID = ?', (user_id,))
+   # cursorAdmin = conn.cursor()
+    #cursorAdmin.execute('SELECT Admin FROM dbo.Admin WHERE IdAdmin = ?', (user_id,))
     account = cursor.fetchone()
     if account:
-        return User(account.CustomerID, Staff=account.Staff)
+        return User(account.ID, Admin=account.Admin)
     return None
 
 @signin_bp.route('/login/', methods=['GET', 'POST'])
@@ -34,7 +34,7 @@ def login():
         password = request.form['password']
         conn = pyodbc.connect(connection_string)
         cursor = conn.cursor()
-        cursor.execute('SELECT * FROM dbo.Customer WHERE UserName = ?', (username,))
+        cursor.execute('SELECT * FROM dbo.[User] WHERE Username = ?', (username,))
         account = cursor.fetchone()
         conn.close()
         if account:
@@ -42,7 +42,7 @@ def login():
                 msg = 'This user account was deactivated and its personal data removed because the user made a GDPR takedown request.'
                 return render_template('signin.html', msg=msg)
             elif bcrypt.check_password_hash(account.Password, password):
-                user = User(account.CustomerID, Staff=account.Staff)
+                user = User(account.ID, Admin=account.Admin)
                 login_user(user)
                 return redirect(url_for('home.index'))
             else:

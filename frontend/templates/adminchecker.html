@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Checker Page</title>
+</head>
+<body>                        
+    {% if current_user.Admin %}
+        Is staff
+    {% else %}
+        Is not staff
+    {% endif %}
+</body>
+</html>

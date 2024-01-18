@@ -1,6 +1,6 @@
 DRIVER_NAME = 'ODBC Driver 17 for SQL Server'
 SERVER_NAME = 'SCHOOL594B' #  SERVER_NAME = ''
-DATABASE_NAME = 'GunStore' 
+DATABASE_NAME = 'ItOnDemand' 
 UID = 'ten1' # UID = 'teste1'
 PWD = '1234'
 

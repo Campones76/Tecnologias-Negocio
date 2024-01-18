@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Account Page</title>
+</head>
+<body>                        
+    {% if current_user.is_authenticated %}
+        <form action="/login/logout">
+            <input type="submit" value="Logout">
+        </form>
+        <form action="/delete_account" method="post" onsubmit="return confirm('Are you sure you want to delete your account? \n(The following action is irreversible)');"</form>
+            <input type="submit" value="Delete">
+        </form>
+        <a href="{{url_for('adminchecker.check')}}">check</a>
+    {% else %}
+        <form action="/login" method="post">
+            <input type="submit" value="Login">
+        </form>
+        <form action="/register" method="post">
+            <input type="submit" value="Signup">
+        </form>
+        <form action="/delete_account" method="post" onsubmit="return confirm('Are you sure you want to delete your account? \n(The following action is irreversible)');"</form>
+            <input type="submit" value="Delete">
+        </form>
+    {% endif %}
+</body>
+</html>

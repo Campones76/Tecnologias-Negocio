@@ -78,13 +78,27 @@
                         </span>
                     </a>
                 </li>
+                
                 <li>
-                    <a href="{{url_for('SigninView.login')}}">
-                        <i class="fa fa-user"></i>
-                        <span class="nav-text">
-                            Login
-                        </span>
-                    </a>
+                    {% if current_user.is_authenticated %}
+                        <a href="{{ url_for('AccountStateView.accountstate') }}">
+                            <i class="fa fa-user"></i>
+                            <span class="nav-text">
+                                Perfil
+                            </span>
+                        </a>
+                    {% else %}
+                        <a href="{{ url_for('SigninView.login') }}">
+                            <i class="fa fa-user"></i>
+                            <span class="nav-text">
+                                Login
+                            </span>
+                        </a>
+                    {% endif %}
+                </li>
+                
+                <li>
+
                 </li>
             </ul>
                 <li style="position: absolute; left: 0; bottom: 0;">
