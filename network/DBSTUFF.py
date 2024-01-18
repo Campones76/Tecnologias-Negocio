@@ -1,7 +1,7 @@
 DRIVER_NAME = 'ODBC Driver 17 for SQL Server'
-SERVER_NAME = 'SCHOOL594B' # Rafa SERVER_NAME = 'LAPTOP-SGU8BV5L'
-DATABASE_NAME = 'GunStore' # Guilherme DATABASE_NAME = 'GunStore'
-UID = 'GunstoreStaff' # Rafa UID = 'teste1'
+SERVER_NAME = 'SCHOOL594B' #  SERVER_NAME = ''
+DATABASE_NAME = 'GunStore' 
+UID = 'ten1' # UID = 'teste1'
 PWD = '1234'
 
 connection_string = f"""
