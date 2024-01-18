@@ -8,7 +8,7 @@ ItOnDemand is a project developed for our database class, focusing on the functi
 
 - Python
 - Flask
-- Mysql
+- Microsoft SQL
 
 ## Requirements
 
