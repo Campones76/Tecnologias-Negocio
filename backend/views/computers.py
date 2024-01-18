@@ -5,4 +5,4 @@ computers_bp = Blueprint('computers', __name__)
 
 @computers_bp.route('/computers')
 def index():
-    return render_template('computadores.php')
+    return render_template('computadores.html')
