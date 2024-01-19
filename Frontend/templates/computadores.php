@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Review</title>
+    <title>Main menu</title>
 
     <link rel="stylesheet" href="../static/styles/main.css">
     <link rel="stylesheet" href="../static/styles/dropdown.css">
@@ -15,18 +15,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
+
+
 <body>
     <div class="container">
         <nav class="main-menu" style="height: 695px; width:250px;">
             <ul>
-                <img src="../static/images//LOGO_PROJETO_TEN.png" style="padding-left: 10px; width: 200px; height: 100px;" alt="Logo">
+                <img src="../static/images/LOGO_PROJETO_TEN.png" style="padding-left: 10px; width: 200px; height: 100px;" alt="Logo">
                 <span class="nav-text" style="color: #364958; font-family: Inter; font-size: 20px;font-style: normal;font-weight: 700;line-height: normal; width:100%;text-align:center; display: inline-block;">
                     IT on Demand
                 </span>
                 <div id="linha">
                 </div>
                 <li style="padding-top: 50px;">
-                    <a href="inicio.php">
+                    <a href={{ url_for('home.index') }}>
                         <i class="fa fa-home" ></i>
                         <span class="nav-text">
                             Home Page
@@ -45,15 +47,15 @@
                <div class="dropdown-container">
                  <ul class="nav nav-sidebar">
                   <li>
-                    <i class="fa fa-laptop"><a href="computadores.html" class="links-dropdown" style="padding-left:10px;">Computers</a></i><p>
-                    <i class="fa fa-keyboard-o" style="padding-left:1px;"><a href="teclados.html" class="links-dropdown" style="padding-left:12px;">Keybords</a></i><p>
-                    <i class="fa fa-mouse" style="padding-left:3px;"><a href="ratos.html" class="links-dropdown" style="padding-left:16px;">Mouses</a></i><p>
-                    <i class="fa fa-desktop"><a href="monitores.html" class="links-dropdown" style="padding-left:12px;">Screen's</a></i>
+                    <i class="fa fa-laptop"><a href={{ url_for('computers.index') }} class="links-dropdown" style="padding-left:10px;">Computers</a></i><p>
+                    <i class="fa fa-keyboard-o" style="padding-left:1px;"><a href="#" class="links-dropdown" style="padding-left:12px;">Keybords</a></i><p>
+                    <i class="fa fa-mouse" style="padding-left:3px;"><a href="#" class="links-dropdown" style="padding-left:16px;">Mouses</a></i><p>
+                    <i class="fa fa-desktop"><a href="#" class="links-dropdown" style="padding-left:12px;">Screen's</a></i>
                   </li>
                 </u>
                 </div>
                 <li>
-                    <a href="carrinho_compras.html">
+                    <a href="utilizadores_inserir.php">
                         <i class="fa fa-shopping-cart"></i>
                         <span class="nav-text">
                             Shopping Cart
@@ -61,7 +63,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="perfil.html">
+                    <a href="utilizador_eventos.php">
                         <i class="fa fa-user"></i>
                         <span class="nav-text ">
                             Profile
@@ -93,42 +95,44 @@
                 </li>
         </nav>
 </div>
-<div class="banner" style="width: 230px;">
-  <p style="font-size:40px; padding-top:10px; color: #364958;font-family: Jockey One; padding-left:20px; font-weight:bold;"><i class="fa fa-comment" style="font-size:30px;" ></i>Review</p>
+<div class="banner">
+  <p style="font-size:40px; padding-top:10px; color: #364958;font-family: Jockey One; padding-left:20px;"><i class="fa fa-boxes-stacked" style="font-size:30px;" ></i>Products-Computers<i class="fa fa-laptop" style="font-size:30px;"></i></p>
 </div>
-<p style="font-weight: bold; margin-left:20%; padding-top: 30px; color: #57828B;font-family: Jockey One;font-size: 30px;font-style: normal;line-height: normal;">Alurin CoreVision 24 FHD 23.8" LED IPS FullHD 100Hz</p>
 
-<div style="margin-left:60%; margin-right: 25%; border-radius: 10px;background: #57828B;  height:60px;">
-<div class="rate" style="padding-right:20px; padding-top:4px">
-   <input type="radio" id="star5" name="rate" value="5" />
-   <label for="star5" title="text">5 stars</label>
-   <input type="radio" id="star4" name="rate" value="4" />
-   <label for="star4" title="text">4 stars</label>
-   <input type="radio" id="star3" name="rate" value="3" />
-   <label for="star3" title="text">3 stars</label>
-   <input type="radio" id="star2" name="rate" value="2" />
-   <label for="star2" title="text">2 stars</label>
-   <input type="radio" id="star1" name="rate" value="1" />
-   <label for="star1" title="text">1 star</label>
- </div>
- </div>
-
+<div id="divBusca">
+  <input type="text" id="txtBusca" placeholder="Buscar..."/>
+  <i class="fa fa-magnifying-glass" style="font-size:30px; padding-top:4px;"></i>
+</div>
 
 <div style="display: flex; flex-direction: row; width:100%; margin-top:30px;">
   <div id="containerimg" style="margin-left:300px;">
-    <img src="../static/images/ECRA 1.jpeg" style=" width: 400px; height: 300px; padding-top:30px; border-radius: 10px;border: 4px solid #CAE4CB;">
-    <p style="margin-left:30%;margin-top:5%">Price:</p>
-    <p style="margin-left:28%; color: #87BBA2;font-family: Jockey One;font-size: 24px;font-style: normal;font-weight: 400;line-height: normal;">111,81€</p>
+    <img src="../static/images/COMPUTADOR 1.jpg" style=" width: 320px; height: 300px; padding-top:30px; border-radius: 10px;border: 4px solid #CAE4CB;">
+    <p>Lenovo IdeaPad Slim 3 15IAH8 Intel Core i5-12450H/16GB/512GB SSD/15.6</p>
+    <p>Price:</p>
+    <p style="color: #87BBA2;font-family: Jockey One;font-size: 24px;font-style: normal;font-weight: 400;line-height: normal;">608,60€</p>
+
   </div>
-  <textarea style="width:700px; height:300px; border-radius: 10px;border: 4px solid #57828B; font-size:30px" placeholder="Write here your opinion..."></textarea>
+  <div id="containerimg" style="margin-left:100px;">
+    <img src="../static/images/COMPUTADOR 2.jpg" style=" width: 320px; height: 300px; padding-top:30px; border-radius: 10px;border: 4px solid #CAE4CB;">
+    <p style="padding-right:20px;">ASUS TUF Gaming F15 Intel Core i5-11400H/16GB/512GB SSD/RTX 2050</p>
+    <p>Price:</p>
+    <p style="color: #87BBA2;font-family: Jockey One;font-size: 24px;font-style: normal;font-weight: 400;line-height: normal;">635,36€</p>
+  </div>
+  <div id="containerimg" style="margin-left:100px;">
+    <img src="../static/images/COMPUTADOR 3.jpg" style=" width: 320px; height: 300px; padding-top:30px; border-radius: 10px;border: 4px solid #CAE4CB;">
+    <p style="padding-right:20px;">Macbook Air APPLE Silver (Apple M1 - RAM: 8 GB - 256 GB SSD - 7-Core GPU)</p>
+    <p>Price:</p>
+    <p style="color: #87BBA2;font-family: Jockey One;font-size: 24px;font-style: normal;font-weight: 400;line-height: normal;">999,99€</p>
+
+  </div>
 </div>
-<button id="popup" style="margin-left: 90%; border-radius: 10px;background: #57828B;width: 103px;height: 56px; font-size: 30px; color: #CAE4CB;" onclick="location.href='inicio.html'">Done!</button>
+
     <div class="container">
         <form action="php/login.php" method="POST">
         </form>
     </div>
     <script>
-/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
     var dropdown = document.getElementsByClassName("dropdown-btn");
     var i;
 
@@ -148,17 +152,6 @@
       $(".nav").find(".active").removeClass("active");
       $(this).parent().addClass("active");
     });
-
-    var popup = document.getElementById('popup');
-         popup.style.display = 'block';
-     }
-
-     function closePopup() {
-         var popup = document.getElementById('popup');
-         popup.style.display = 'none';
-         location.href = 'inicio.html'; // Redireciona o usuário de volta para o mesmo local
-     }
-
 
     </script>
 

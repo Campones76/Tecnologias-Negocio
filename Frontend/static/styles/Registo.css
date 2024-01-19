@@ -1,0 +1,185 @@
+.overlap {
+    position: absolute;
+    width: 398px;
+    height: 362px;
+    left: 650px;
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    object-fit: cover;
+}
+
+
+.text-wrapper-9 {
+    position: absolute;
+    width: 328px;
+    top: 170px;
+    right: 90px;
+    font-family: "Jockey One", Helvetica;
+    font-weight: bold;
+    color: #364958;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+input[type="email" i] {
+    padding-left: 20px;
+    width: 608px;
+    height: 50px;
+    top: 230px;
+    left: 450px;
+    font-family: "Jockey One", Helvetica;
+    font-weight: bold;
+    color: #364958;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    position: absolute;
+    background-color: #87bba2;
+    border-radius: 10px;
+    border: 0 none;
+    outline: none;
+}
+
+input[type="password" i] {
+    padding-left: 20px;
+    width: 608px;
+    height: 50px;
+    margin-top: 280px;
+    left: 450px;
+    font-family: "Jockey One", Helvetica;
+    font-weight: bold;
+    color: #364958;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    position: absolute;
+    background-color: #87bba2;
+    border-radius: 10px;
+    border: 0 none;
+    outline: none;
+}
+
+input[name="password2" i] {
+    padding-left: 20px;
+    width: 608px;
+    height: 50px;
+    margin-top: 320px;
+    left: 450px;
+    font-family: "Jockey One", Helvetica;
+    font-weight: bold;
+    color: #364958;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    position: absolute;
+    background-color: #87bba2;
+    border-radius: 10px;
+    border: 0 none;
+    outline: none;
+}
+
+input[type="checkbox" i] {
+    padding-left: 20px;
+    width: 15px;
+    height: 15px;
+    top: 420px;
+    left: 650px;
+    font-weight: bold;
+    color: #364958;
+    font-size: 5px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    position: absolute;
+}
+
+::placeholder {
+    color: #364958;
+}
+
+.textocheckbox {
+    position: absolute;
+    width: 199px;
+    height: 31px;
+    top: 426px;
+    left: 670px;
+    font-family: "Jockey One", Helvetica;
+    font-weight: bold;
+    color: #364958;
+    font-size: 10px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.overlap-2 {
+    position: absolute;
+    width: 370px;
+    height: 76px;
+    top: 450px;
+    left: 680px;
+    border-radius: 10px;
+}
+
+.rectangle-3 {
+    position: absolute;
+    width: 158px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    background-color: #57828b;
+    border-radius: 10px;
+}
+
+.text-wrapper-11 {
+    position: absolute;
+    width: 94px;
+    height: 31px;
+    top: 10px;
+    left: 25px;
+    font-family: "Jockey One", Helvetica;
+    font-weight: bold;
+    color: #cae4cb;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.text-wrapper-15 {
+    position: absolute;
+    width: 270px;
+    height: 31px;
+    top: 510px;
+    left: 650px;
+    font-family: "Jockey One", Helvetica;
+    font-weight: bold;
+    color: #364958;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.text-wrapper-14 {
+    position: absolute;
+    width: 94px;
+    height: 31px;
+    top: 540px;
+    left: 710px;
+    font-family: "Jockey One", Helvetica;
+    font-weight: bold;
+    color: #87bba2;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}

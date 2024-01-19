@@ -1,0 +1,356 @@
+.texto {
+    position: absolute;
+    top: 30px;
+    left: 700px;
+    font-family: "Jockey One", Helvetica;
+    font-weight: bold;
+    color: #364958;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.overlap {
+    position: absolute;
+    top: 50px;
+    left: 300px;
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    object-fit: cover;
+}
+
+.text-wrapper-9 {
+    position: absolute;
+    width: 223px;
+    top: 180px;
+    left: 10px;
+    font-family: "Jockey One", Helvetica;
+    font-weight: bold;
+    color: #364958;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.email_texto {
+    position: absolute;
+    width: 94px;
+    height: 31px;
+    top: 100px;
+    left: 650px;
+    font-family: "Jockey One", Helvetica;
+    color: #364958;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.overlap-email {
+    position: absolute;
+    width: 358px;
+    height: 76px;
+    top: 130px;
+    left: 650px;
+    border-radius: 10px;
+}
+
+.rectangle-email {
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    background-color: #87BBA2;
+    border-radius: 10px;
+}
+
+.email {
+    position: absolute;
+    width: 94px;
+    height: 31px;
+    top: 13px;
+    left: 10px;
+    font-family: "Jockey One", Helvetica;
+    color: #364958;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.contato_texto {
+    position: absolute;
+    width: 94px;
+    height: 31px;
+    top: 200px;
+    left: 650px;
+    font-family: "Jockey One", Helvetica;
+    color: #364958;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.overlap-numero {
+    position: absolute;
+    width: 358px;
+    height: 76px;
+    top: 230px;
+    left: 650px;
+    border-radius: 10px;
+}
+
+.rectangle-numero {
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    background-color: #87BBA2;
+    border-radius: 10px;
+}
+
+.numero {
+    position: absolute;
+    width: 94px;
+    height: 31px;
+    top: 13px;
+    left: 10px;
+    font-family: "Jockey One", Helvetica;
+    color: #364958;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.overlap-2 {
+    position: absolute;
+    width: 358px;
+    height: 76px;
+    top: 300px;
+    left: 650px;
+    border-radius: 10px;
+}
+
+.rectangle-3 {
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    background-color: #57828b;
+    border-radius: 10px;
+}
+
+.text-wrapper-00 {
+    position: absolute;
+    width: 94px;
+    height: 31px;
+    top: 10px;
+    left: 30px;
+    font-family: "Jockey One", Helvetica;
+    font-weight: bold;
+    color: #cae4cb;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.overlap-logout {
+    position: absolute;
+    top: 50px;
+    left: 900px;
+}
+
+.img-logout {
+    width: 40px;
+    height: 40px;
+    top: 85px;
+    left: 30px;
+    position: absolute;
+    object-fit: cover;
+}
+
+.text-logout {
+    position: absolute;
+    width: 223px;
+    top: 88px;
+    left: 20px;
+    font-family: "Jockey One", Helvetica;
+    font-weight: bold;
+    color: #364958;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.overlap-3 {
+    position: absolute;
+    width: 600px;
+    height: 266px;
+    top: 430px;
+    left: 300px;
+}
+
+.text-wrapper-11 {
+    position: absolute;
+    width: 600px;
+    top: 0;
+    left: 5px;
+    font-family: "Jockey One", Helvetica;
+    font-weight: bold;
+    color: #87bba2;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.rectangle-4 {
+    position: absolute;
+    width: 140px;
+    height: 170px;
+    top: 465px;
+    left: 300px;
+    object-fit: cover;
+}
+
+.rectangle-5 {
+    position: absolute;
+    width: 140px;
+    height: 170px;
+    top: 465px;
+    left: 450px;
+    object-fit: cover;
+}
+
+.rectangle-6 {
+    position: absolute;
+    width: 140px;
+    height: 170px;
+    top: 465px;
+    left: 600px;
+    object-fit: cover;
+}
+
+.rectangle-7 {
+    position: absolute;
+    width: 140px;
+    height: 170px;
+    top: 465px;
+    left: 750px;
+    object-fit: cover;
+}
+
+.rectangle-8 {
+    position: absolute;
+    width: 140px;
+    height: 170px;
+    top: 465px;
+    left: 900px;
+    object-fit: cover;
+}
+
+.rectangle-9 {
+    position: absolute;
+    width: 140px;
+    height: 170px;
+    top: 465px;
+    left: 1050px;
+    object-fit: cover;
+}
+
+.margarida {
+    position: absolute;
+    width: 154px;
+    top: 640px;
+    left: 290px;
+    font-family: "Jockey One", Helvetica;
+    font-weight: bold;
+    color: #364958;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.jose {
+    position: absolute;
+    width: 154px;
+    top: 640px;
+    left: 740px;
+    font-family: "Jockey One", Helvetica;
+    font-weight: bold;
+    color: #364958;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.rafael {
+    position: absolute;
+    width: 154px;
+    top: 640px;
+    left: 895px;
+    font-family: "Jockey One", Helvetica;
+    font-weight: bold;
+    color: #364958;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.Oliwia {
+    position: absolute;
+    width: 154px;
+    top: 640px;
+    left: 1040px;
+    font-family: "Jockey One", Helvetica;
+    font-weight: bold;
+    color: #364958;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.gabriel {
+    position: absolute;
+    width: 154px;
+    top: 640px;
+    left: 440px;
+    font-family: "Jockey One", Helvetica;
+    font-weight: bold;
+    color: #364958;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.goncalo {
+    position: absolute;
+    width: 154px;
+    top: 640px;
+    left: 590px;
+    font-family: "Jockey One", Helvetica;
+    font-weight: bold;
+    color: #364958;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
