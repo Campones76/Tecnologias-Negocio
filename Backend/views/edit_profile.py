@@ -9,20 +9,18 @@ edit_bp = Blueprint('edit', __name__)
 def edit():
     # Output message if something goes wrong...
     msg = ''
-    new_username = None  # Define new_username here
-
-    # Check if the 'username' key is in the session
-    if 'username' not in session:
-        msg = 'User not logged in.'
-        return render_template('edit_profile.html', msg=msg)
+    new_username = None
 
     # Continue processing for both GET and POST requests
+    if 'user_id' not in session:
+        msg = 'User not logged in.'
+        return render_template('edit_profile.html', msg=msg)
 
     if request.method == 'POST' and 'username' in request.form:
         # Create variables for easy access
         new_username = request.form['username']
 
-        current_username = session['username']
+        current_user_id = session['user_id']
 
         # Check if account exists using MSSQL
         conn = pyodbc.connect(connection_string)
@@ -38,7 +36,7 @@ def edit():
             msg = 'Username must contain only characters and numbers!'
         else:
             # Account doesn't exist, and the form data is valid, now update username in accounts table
-            cursor.execute('UPDATE dbo.[User] SET Username = ? WHERE Username = ?', (new_username, current_username))
+            cursor.execute('UPDATE dbo.[User] SET Username = ? WHERE ID = ?', (new_username, current_user_id))
             conn.commit()
             conn.close()
 
