@@ -1,15 +1,16 @@
 from flask import Flask
 from flask_bcrypt import Bcrypt
-from backend.views.home import *
-from backend.views.SigninView import *
-from backend.views.SignupView import *
-from backend.views.computers import *
-from backend.views.mouse import *
-from backend.views.keyboards import *
-from backend.views.displays import *
-from backend.views.checkout import *
-from backend.views.adminchecker import *
-from backend.views.AccountStateView import *
+from Backend.views.home import *
+from Backend.views.SigninView import *
+from Backend.views.SignupView import *
+from Backend.views.edit_profile import *
+from Backend.views.computers import *
+from Backend.views.mouse import *
+from Backend.views.keyboards import *
+from Backend.views.displays import *
+from Backend.views.checkout import *
+from Backend.views.adminchecker import *
+from Backend.views.AccountStateView import *
 
 app = Flask(__name__, template_folder='../frontend/templates', static_folder='../frontend/static')
 
@@ -28,6 +29,7 @@ app.config['SECRET_KEY'] = SECRET_KEY
 app.register_blueprint(home_bp)
 app.register_blueprint(signin_bp)
 app.register_blueprint(signup_bp)
+app.register_blueprint(edit_bp)
 app.register_blueprint(computers_bp)
 app.register_blueprint(mouse_bp)
 app.register_blueprint(keyboards_bp)

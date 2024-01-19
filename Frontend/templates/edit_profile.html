@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- cabeçalho omitido para brevidade -->
+    </head>
+    <body>
+        <div class="Edit">
+            <h1>Edit Profile</h1>
+            <!-- Adicione a seguinte linha para exibir a mensagem -->
+            {% if msg %}
+                <p class="message">{{ msg }}</p>
+            {% endif %}
+            <form action="{{ url_for('edit.edit') }}" method="post">
+                <input type="text" name="username" placeholder="New Username">
+                <input type="submit" value="Update">
+            </form>
+        </div>
+        <!-- script omitido para brevidade -->
+    </body>
+</html>

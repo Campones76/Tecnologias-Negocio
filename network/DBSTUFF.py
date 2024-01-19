@@ -1,7 +1,7 @@
 DRIVER_NAME = 'ODBC Driver 17 for SQL Server'
-SERVER_NAME = 'SCHOOL594B' #  SERVER_NAME = ''
+SERVER_NAME = 'NEUROX21-LAPTOP' #  SERVER_NAME = ''
 DATABASE_NAME = 'ItOnDemand' 
-UID = 'ten1' # UID = 'teste1'
+UID = 'ten2' # UID = 'teste2'
 PWD = '1234'
 
 connection_string = f"""
