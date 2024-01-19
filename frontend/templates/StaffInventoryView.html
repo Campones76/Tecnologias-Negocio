@@ -40,7 +40,7 @@
                 </li> 
                 <li>
                     {% if current_user.is_authenticated and current_user.Admin %}
-                    <a href="{{url_for('StaffPanel.staffpanel')}}">ADD</a> <!--SalesView.salesview--> <!--Adicionar Editor de Status de vendas nesta página-->
+                    <a href="{{url_for('Inventory_bp.add_product')}}">ADD</a> <!--SalesView.salesview--> <!--Adicionar Editor de Status de vendas nesta página-->
                     {% endif %}
                 </li>
                 <li>
