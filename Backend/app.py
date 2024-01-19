@@ -10,6 +10,9 @@ from backend.views.displays import *
 from backend.views.checkout import *
 from backend.views.adminchecker import *
 from backend.views.AccountStateView import *
+from backend.views.StaffPanel import *
+from backend.views.StaffSalesView import *
+from backend.views.StaffInventoryView import *
 
 app = Flask(__name__, template_folder='../frontend/templates', static_folder='../frontend/static')
 
@@ -35,7 +38,9 @@ app.register_blueprint(displays_bp)
 app.register_blueprint(carrinho_bp)
 app.register_blueprint(adminchecker_bp)
 app.register_blueprint(accountstate_bp)
-
+app.register_blueprint(StaffPanel_bp)
+app.register_blueprint(StaffSalesView_bp)
+app.register_blueprint(StaffInventoryView_bp)
 
 if __name__ == '__main__':
     app.run(debug=True)

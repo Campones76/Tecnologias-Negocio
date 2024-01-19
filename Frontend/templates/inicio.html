@@ -63,6 +63,23 @@
                     </a>
                 </li>
                 <li>
+                    {% if current_user.is_authenticated %}
+                        <a href="{{ url_for('AccountStateView.accountstate') }}">
+                            <i class="fa fa-user"></i>
+                            <span class="nav-text">
+                                Profile
+                            </span>
+                        </a>
+                    {% else %}
+                        <a href="{{ url_for('SigninView.login') }}">
+                            <i class="fa fa-user"></i>
+                            <span class="nav-text">
+                                Login
+                            </span>
+                        </a>
+                    {% endif %}
+                </li>
+                <li>
                     <a href="perfil.html">
                         <i class="fa fa-user"></i>
                         <span class="nav-text ">
@@ -78,25 +95,12 @@
                         </span>
                     </a>
                 </li>
-                
                 <li>
-                    {% if current_user.is_authenticated %}
-                        <a href="{{ url_for('AccountStateView.accountstate') }}">
-                            <i class="fa fa-user"></i>
-                            <span class="nav-text">
-                                Perfil
-                            </span>
-                        </a>
+                    {% if current_user.is_authenticated and current_user.Admin %}
+                    <a href="{{url_for('StaffPanel.staffpanel')}}">Admin Panel</a>
                     {% else %}
-                        <a href="{{ url_for('SigninView.login') }}">
-                            <i class="fa fa-user"></i>
-                            <span class="nav-text">
-                                Login
-                            </span>
-                        </a>
                     {% endif %}
-                </li>
-                
+                </li>                
                 <li>
 
                 </li>
