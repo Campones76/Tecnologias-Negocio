@@ -1,0 +1,8 @@
+<!-- your_app/templates/products/list_products.html -->
+<h2>Product List</h2>
+<ul>
+    {% for product in products %}
+        <li><a href="{{ url_for('products.view_product', product_id=product.ID) }}">{{ product.Name }}</a></li>
+    {% endfor %}
+</ul>
+<a href="{{ url_for('products.add_product') }}">Add Product</a>

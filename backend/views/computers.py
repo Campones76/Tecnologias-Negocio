@@ -8,4 +8,4 @@ computers_bp = Blueprint('computers', __name__)
 def index():
     if not current_user.is_authenticated:
         return render_template('Aviso_Login.html')
-    return render_template('computadores.html')
+    return render_template('computers.html')

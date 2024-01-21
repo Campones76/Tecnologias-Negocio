@@ -1,0 +1,4 @@
+<!-- your_app/templates/products/view_product.html -->
+<h2>{{ product.name }}</h2>
+<p>Price: {{ product.Price }}€</p>
+<a href="{{ url_for('products.edit_product', product_id=product.ID) }}">Edit</a>
