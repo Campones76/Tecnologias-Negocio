@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Make Transaction</title>
+  <link rel="stylesheet" href="/static/styles/selectuser.css" />
+</head>
+<body>
+  <div class="maketransactionbox">
+    <h1>Make Transaction</h1>
+    <div class="insertdatabox">
+      <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>
+          {{ form.purchase_invoice.label }}<br>
+          {{ form.purchase_invoice() }}
+        </p>
+        <p>
+          {{ form.total.label }}<br>
+          {{ form.total() }}
+        </p>
+        <p>
+          {{ form.OwnershipJustification.label }}<br>
+          {{ form.OwnershipJustification() }}
+        </p>
+        <p>
+          {{ form.background_check_results.label }}<br>
+          {{ form.background_check_results() }}
+        </p>
+        <p>
+          {{ form.waiting_period_info.label }}<br>
+          {{ form.waiting_period_info() }}
+        </p>
+        <p>
+          {{ form.additional_notes.label }}<br>
+          {{ form.additional_notes() }}
+        </p>
+        <p>{{ form.submit() }}</p>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

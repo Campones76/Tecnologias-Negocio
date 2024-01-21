@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select User</title>
+</head>
+<body>
+    <h1>Select User</h1>
+    <form method="POST" action="{{ url_for('SelectUserTransactions.select_user') }}">
+        <label for="user_id">Select a user:</label>
+        <select name="user_id" id="user_id">
+            {% for user in users %}
+                <option value="{{ user[0] }}">{{ user[1] }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Select">
+    </form>    
+</body>
+</html>

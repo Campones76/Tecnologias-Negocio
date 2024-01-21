@@ -1,17 +1,18 @@
-@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
-@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+/* main.css */
+@import url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300');
 
+/* Navigation Menu Styles */
 .main-menu {
   background: #57828B;
-  position: absolute;
+  position: fixed; /* make the navigation bar fixed */
   top: 0;
   bottom: 0;
   height: 100%;
   left: 0;
-  width: 300px;
-  overflow: hidden;
+  width: 15%; /* Adjusted width to 15% of the viewport */
+  overflow-y: auto; /* enable scrolling for small screens/long menus */
 }
-
 
 .main-menu>ul {
   margin: 7px 0;
@@ -20,36 +21,44 @@
 .main-menu li {
   position: relative;
   display: block;
-  width: 260px;
-  /* Set a fixed width for the menu items */
-}
-
-.main-menu ul li.dropdown:hover .dropdown-menu {
-  display: block;
+  width: auto; /* allow content to define the width */
+  padding-left: 5%; /* add padding instead of fixed width */
 }
 
 .main-menu a {
   color: #1E1E1E;
   font-family: Inter;
-  font-size: 15px;
+  font-size: 1em;
   font-weight: bold;
   font-style: normal;
-  line-height: normal;
+  line-height: 1.5em;
 }
 
-.links-dropdown {
-  padding-left: 10px;
-  color: black;
-  text-decoration: none;
+/* Content Styles */
+/* Add a left margin to the main content equal to the width of the navigation menu */
+.main-content {
+  margin-left: 15%;
+  padding: 20px;
 }
 
 .banner {
-  height: 80px;
-  width: 500px;
-  background-color: #ffffff;
-  border: 5px solid #87BBA2;
-  margin-left: 300px;
-  margin-top: 50px;
+  /* Center the banner within the main content div */
+  margin: 0 auto;
+  display: block;
+}
+
+/* Product Grid Styles */
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* This will center the items in the row */
+  gap: 20px; /* This adds space between the items */
+}
+
+.product-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
 }
 
 #divBusca {
@@ -57,7 +66,7 @@
   border: solid 1px;
   width: 500px;
   height: 40px;
-  margin-left: 300px;
+  margin-left: 20%; /* Adjusted to percentage */
   margin-top: 20px;
 }
 
@@ -71,11 +80,10 @@
   width: 437px;
 }
 
-#containerimg {
+#containerimg img {
   height: 340px;
-  width: 500px;
+  margin-left: 80%; /* Adjusted to percentage */
 }
-
 
 #containerimg p {
   color: #364958;
@@ -84,11 +92,11 @@
   font-style: normal;
   font-weight: bold;
   line-height: normal;
+  margin-left: 80%; /* Adjusted to percentage */
 }
 
 .links-dropdown:hover {
   text-decoration: none;
-  /* Remover a linha de sublinhado quando o cursor está sobre o link */
 }
 
 .container_historico {
@@ -331,37 +339,27 @@ nav li {
 }
 
 
-/* Large screens */
-@media screen and (min-width: 90%) {
+/* Responsive adjustments for larger screens */
+@media (min-width: 768px) {
   .main-menu {
-    width: 10%;
+    width: 20%; /* Adjusted to a percentage for larger screens */
   }
 
   .main-menu li {
-    width: 9%;
+    width: 90%; /* Adjusted to a percentage of the parent element */
   }
 }
 
-/* Medium screens */
-@media screen and (max-width: 80%) and (min-width:90%) {
+/* Responsive adjustments for smaller screens */
+@media (max-width: 767px) {
   .main-menu {
-    width: 10%;
+    width: 25%; /* Adjusted to a percentage for smaller screens */
   }
 
   .main-menu li {
-    width: 9%;
-  }
-}
-
-/* Small screens */
-@media screen and (max-width: 15%) {
-  .main-menu {
-    width: 100%;
+    width: 90%; /* Adjusted to a percentage of the parent element */
   }
 
-  .main-menu li {
-    width: 100%;
-  }
 
   .main-menu ul li.dropdown:hover .dropdown-menu {
     display: none;
@@ -370,4 +368,5 @@ nav li {
   .no-touch .scrollable.hover:hover {
     overflow-y: hidden;
   }
+
 }

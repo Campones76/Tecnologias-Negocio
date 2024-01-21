@@ -1,0 +1,92 @@
+<!-- navigation.html -->
+<nav class="main-menu" style="height: 795px; width:250px;">
+    <ul>
+        <img src="../static/images/LOGO_PROJETO_TEN.png" style="padding-left: 10px; width: 200px; height: 100px;" alt="Logo">
+        <span class="nav-text" style="color: #364958; font-family: Inter; font-size: 20px;font-style: normal;font-weight: 700;line-height: normal; width:100%;text-align:center; display: inline-block;">
+            IT on Demand
+        </span>
+        <div id="linha">
+        </div>
+        <li style="padding-top: 20%;">
+            <a href="{{url_for('home.index')}}">
+                <i class="fa fa-home" ></i>
+                <span class="nav-text">
+                    Home Page
+                </span>
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-btn">
+                <i class="fa fa-boxes-stacked" ></i>
+                <span class="nav-text">
+                    Products
+                    <i class="fa fa-caret-down" style="position:absolute;top:10%;right:50px"></i>
+                </span>
+            </a>
+        </li>
+       <div class="dropdown-container">
+         <ul class="nav nav-sidebar">
+          <li>
+            <i class="fa fa-laptop"><a href="{{url_for('products.list_computers')}}" class="links-dropdown" style="padding-left:10px;">Computers</a></i><p>
+            <i class="fa fa-keyboard-o" style="padding-left:1px;"><a href="{{url_for('products.list_keyboard')}}" class="links-dropdown" style="padding-left:12px;">Keybords</a></i><p>
+            <i class="fa fa-mouse" style="padding-left:3px;"><a href="{{url_for('products.list_mouse')}}" class="links-dropdown" style="padding-left:16px;">Mouses</a></i><p>
+            <i class="fa fa-desktop"><a href="{{url_for('products.list_display')}}" class="links-dropdown" style="padding-left:12px;">Screen's</a></i>
+          </li>
+        </u>
+        </div>
+        <li>
+            <a href="{{url_for('carrinho.shopping_cart')}}">
+                <i class="fa fa-shopping-cart"></i>
+                <span class="nav-text">
+                    Shopping Cart
+                </span>
+            </a>
+        </li>
+        <li>
+            {% if current_user.is_authenticated %}
+                <a href="{{ url_for('AccountStateView.accountstate') }}">
+                    <i class="fa fa-user"></i>
+                    <span class="nav-text">
+                        Profile
+                    </span>
+                </a>
+            {% else %}
+                <a href="{{ url_for('SigninView.login') }}">
+                    <i class="fa fa-user"></i>
+                    <span class="nav-text">
+                        Login
+                    </span>
+                </a>
+            {% endif %}
+        </li>
+        <li>
+            <a href="{{url_for('About.index')}}">
+                <i class="fa fa-users"></i>
+                <span class="nav-text">
+                    About Us
+                </span>
+            </a>
+        </li>
+        <li>
+            {% if current_user.is_authenticated and current_user.Admin %}
+            <a href="{{url_for('StaffPanel.staffpanel')}}">Admin Panel</a>
+            {% else %}
+            {% endif %}
+        </li>                
+        <li>
+
+        </li>
+    </ul>
+        <li style="position: absolute; left: 0; bottom: 0;">
+          <div style="background-color: #CAE4CB; width:90%; height:100px; border-radius: 8px; padding-left:10px;">
+            <h4 style="padding-top:10px;">Contact Us By:</h4>
+              <p>
+                <strong>Email:</strong>
+                <a href="#" style="font-size: 15px; font-weight:500;">itondemand@gmail.com</a>
+                <strong>Phone:</strong>
+                +222 222 222
+              </p>
+          </div>
+          <i style="color: #1E1E1E;font-family: Inter;font-size: 15px;font-style: normal;font-weight: 500;line-height: normal;padding-left:150px;">@TEN2023</i>
+        </li>
+</nav>
