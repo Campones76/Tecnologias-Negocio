@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Armas</title>
+    <link rel="stylesheet" href="/static/styles/globals.css" />
+    <link rel="stylesheet" href="/static/styles/tables.css" />
+
+</head>
+<body>
+    <div class="navbar show-menu">
+        <div class="header-inner-content "> 
+            <h1 class="logo"> LOJA DE <span>ARMAS</span> </h1>
+            <nav>
+                <ul>
+                    <li>
+                        {% if current_user.is_authenticated and current_user.Staff %}
+                        <a href="{{url_for('AddInventoryView.add_inventory')}}">ADICIONAR INVENTÁRIO</a>
+                        {% endif %}
+                    </li>
+                    <li>
+                        {% if current_user.is_authenticated and current_user.Staff %}
+                        <a href="{{url_for('excelgen.generateinv')}}">GERAR COPIA DE INVENTÁRIO</a>
+                        {% endif %}
+                    </li>
+                    <li>
+                        {% if current_user.is_authenticated and current_user.Staff %}
+                        <a href="{{url_for('StaffPanel.staffpanel')}}">VOLTAR</a>
+                        {% endif %}
+                    </li>
+                    <li>
+                        {% if current_user.is_authenticated and current_user.Staff %}
+                        <a href="{{url_for('SigninView.logout')}}">LOGOUT</a>
+                        {% else %}
+                        {% endif %}
+                    </li>
+                </ul>
+            </nav>
+            <div class="nav-icon-container" >
+                <img src="/static/images/menu.png" class="menu-button" />
+            </div>
+         </div>   
+    </div>
+
+    <table>
+        <tr>
+            <th>SerialNum</th>
+            <th>Type</th>
+            <th>Maker & Model</th>
+            <th>Calibre</th>
+            <th>DateOfPurchase</th>
+            <th>OwnershipJustification</th>
+            <th>StorageDetails</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row.SerialNum }}</td>
+            <td>{{ row.Type }}</td>
+            <td>{{ row.Maker_Model }}</td>
+            <td>{{ row.Calibre }}</td>
+            <td>{{ row.DateOfPurchase }}</td>
+            <td>{{ row.OwnershipJustification }}</td>
+            <td>{{ row.StorageDetails }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <script>
+        const navbar = document.querySelector (".navbar");
+        const menuButton = document.querySelector (".menu-button");
+
+        menuButton.addEventListener("click", () => {
+            navbar.classList.toggle("show-menu");
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Select Firearm</title>
+  <link rel="stylesheet" href="/static/styles/selectuser.css" />
+</head>
+<body>
+  <div class="selectuserbox">
+    <h1>Select Firearm</h1>
+    <div class="insertdatabox">
+      <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>
+          {{ form.firearm.label }}<br>
+          {{ form.firearm() }}
+        </p>
+        <p>{{ form.submit() }}</p>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
