@@ -25,7 +25,7 @@
                 </span>
                 <div id="linha">
                 </div>
-                <li style="padding-top: 50px;">
+                <li style="padding-top: 20%;">
                     <a href="{{url_for('home.index')}}">
                         <i class="fa fa-home" ></i>
                         <span class="nav-text">
@@ -42,18 +42,18 @@
                         </span>
                     </a>
                 </li>
-               <div class="dropdown-container">
-                 <ul class="nav nav-sidebar">
+              <div class="dropdown-container">
+                <ul class="nav nav-sidebar">
                   <li>
-                    <i class="fa fa-laptop"><a href="computadores.html" class="links-dropdown" style="padding-left:10px;">Computers</a></i><p>
-                    <i class="fa fa-keyboard-o" style="padding-left:1px;"><a href="teclados.html" class="links-dropdown" style="padding-left:12px;">Keybords</a></i><p>
-                    <i class="fa fa-mouse" style="padding-left:3px;"><a href="ratos.html" class="links-dropdown" style="padding-left:16px;">Mouses</a></i><p>
-                    <i class="fa fa-desktop"><a href="monitores.html" class="links-dropdown" style="padding-left:12px;">Screen's</a></i>
+                    <i class="fa fa-laptop"><a href="{{url_for('computers.index')}}" class="links-dropdown" style="padding-left:10px;">Computers</a></i><p>
+                    <i class="fa fa-keyboard-o" style="padding-left:1px;"><a href="{{url_for('keyboards.index')}}" class="links-dropdown" style="padding-left:12px;">Keybords</a></i><p>
+                    <i class="fa fa-mouse" style="padding-left:3px;"><a href="{{url_for('mouse.index')}}" class="links-dropdown" style="padding-left:16px;">Mouses</a></i><p>
+                    <i class="fa fa-desktop"><a href="{{url_for('displays.index')}}" class="links-dropdown" style="padding-left:12px;">Screen's</a></i>
                   </li>
                 </u>
                 </div>
                 <li>
-                    <a href="carrinho_compras.html">
+                    <a href="{{url_for('carrinho.shopping_cart')}}">
                         <i class="fa fa-shopping-cart"></i>
                         <span class="nav-text">
                             Shopping Cart
@@ -61,13 +61,23 @@
                     </a>
                 </li>
                 <li>
-                    <a href="perfil.html">
-                        <i class="fa fa-user"></i>
-                        <span class="nav-text ">
-                            Profile
-                        </span>
-                    </a>
+                    {% if current_user.is_authenticated %}
+                        <a href="{{ url_for('AccountStateView.accountstate') }}">
+                            <i class="fa fa-user"></i>
+                            <span class="nav-text">
+                                Profile
+                            </span>
+                        </a>
+                    {% else %}
+                        <a href="{{ url_for('SigninView.login') }}">
+                            <i class="fa fa-user"></i>
+                            <span class="nav-text">
+                                Login
+                            </span>
+                        </a>
+                    {% endif %}
                 </li>
+
                 <li>
                     <a href="utilizador_eventos.php">
                         <i class="fa fa-users"></i>
@@ -75,6 +85,15 @@
                             About Us
                         </span>
                     </a>
+                </li>
+                <li>
+                    {% if current_user.is_authenticated and current_user.Admin %}
+                    <a href="{{url_for('StaffPanel.staffpanel')}}">Admin Panel</a>
+                    {% else %}
+                    {% endif %}
+                </li>                
+                <li>
+  
                 </li>
             </ul>
                 <li style="position: absolute; left: 0; bottom: 0;">
