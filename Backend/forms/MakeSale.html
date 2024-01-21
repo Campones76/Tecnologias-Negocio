@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Sales Page</title>
+</head>
+<body>
+   <h1>Sales Page</h1>
+   
+   <form method="POST" action="/transactions">
+       <label for="TimeOfPurchase">Time Of Purchase:</label>
+       <input type="date" id="TimeOfPurchase" name="TimeOfPurchase">
+       
+       <label for="firearm_id">Select a Firearm:</label>
+       <select name="firearm_id" id="firearm_id">
+           {% for firearm in firearms %}
+               <option value="{{ firearm.FirearmID }}">{{ firearm.FirearmID }}</option>
+           {% endfor %}
+       </select>
+       
+       <label for="PurchaseInvoice">Purchase Invoice:</label>
+       <input type="text" id="PurchaseInvoice" name="PurchaseInvoice">
+       
+       <label for="Total">Total:</label>
+       <input type="number" id="Total" name="Total">
+       
+       <label for="BackgroundCheckResults">Background Check Results:</label>
+       <textarea id="BackgroundCheckResults" name="BackgroundCheckResults"></textarea>
+       
+       <label for="WaitingPeriodInfo">Waiting Period Info:</label>
+       <textarea id="WaitingPeriodInfo" name="WaitingPeriodInfo"></textarea>
+       
+       <label for="AdditionalNotes">Additional Notes:</label>
+       <textarea id="AdditionalNotes" name="AdditionalNotes"></textarea>
+       
+       <label for="Has_License">Has License:</label>
+       <input type="checkbox" id="Has_License" name="Has_License">
+       
+       <input type="hidden" name="user_id" value="{{ user_id }}">
+       
+       <input type="submit" value="Submit">
+   </form>
+</body>
+</html>

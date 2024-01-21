@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ADD TO INVENTORY</title>
+        <link rel="stylesheet" href="/static/styles/globals.css" />
+        <link rel="stylesheet" href="/static/styles/addToInventory.css" />
+    </head>
+    <body>
+        <div class="addtoinventory">
+            <h1>ADD TO INVENTORY</h1>
+            <form action="{{url_for('AddInventoryView.add_inventory')}}" method="post" autocomplete="true">
+                <label for="SerialNum">Serial Number:</label><br>
+                <input type="text" id="SerialNum" name="SerialNum" required><br>
+                <label for="Type">Type:</label><br>
+                <input type="text" id="Type" name="Type" required><br>
+                <label for="Maker_Model">Maker Model:</label><br>
+                <input type="text" id="Maker_Model" name="Maker_Model" required><br>
+                <label for="Calibre">Calibre:</label><br>
+                <input type="text" id="Calibre" name="Calibre" required><br>
+                <label for="DateOfPurchase">Date Of Purchase:</label><br>
+                <input type="date" id="DateOfPurchase" name="DateOfPurchase" required><br>
+                <label for="OwnershipJustification">Ownership Justification:</label><br>
+                <input type="text" id="OwnershipJustification" name="OwnershipJustification" required><br>
+                <label for="StorageDetails">Storage Details:</label><br>
+                <input type="text" id="StorageDetails" name="StorageDetails" required><br>
+                <label for="InspectionOrAuditDetails">Inspection Or Audit Details:</label><br>
+                <input type="text" id="InspectionOrAuditDetails" name="InspectionOrAuditDetails" required><br>
+                <div class="msg">{{ msg }}</div>
+                <input type="submit" value="Add">
+            </form>
+        </div>
+    </body>
+</html>
