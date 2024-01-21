@@ -12,6 +12,9 @@
             {% endif %}
             <form action="{{ url_for('edit.edit') }}" method="post">
                 <input type="text" name="username" placeholder="New Username">
+                <input type="text" name="nif" placeholder="New NIF">
+                <input type="text" name="contacts" placeholder="New Contact">
+                <input type="text" name="email" placeholder="New Email">
                 <input type="submit" value="Update">
             </form>
         </div>
