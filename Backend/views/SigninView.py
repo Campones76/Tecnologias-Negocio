@@ -1,6 +1,6 @@
 from flask_bcrypt import Bcrypt
-from flask import Blueprint, app, render_template, request, redirect, url_for
-from flask_login import LoginManager, UserMixin, current_user, login_user, login_required, logout_user
+from flask import Blueprint, render_template, request, redirect, url_for, session
+from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user
 from network.DBSTUFF import connection_string
 import pyodbc
 
@@ -20,8 +20,6 @@ def load_user(user_id):
     conn = pyodbc.connect(connection_string)
     cursor = conn.cursor()
     cursor.execute('SELECT * FROM dbo.[User] WHERE ID = ?', (user_id,))
-   # cursorAdmin = conn.cursor()
-    #cursorAdmin.execute('SELECT Admin FROM dbo.Admin WHERE IdAdmin = ?', (user_id,))
     account = cursor.fetchone()
     if account:
         return User(account.ID, Admin=account.Admin)
@@ -44,6 +42,10 @@ def login():
             elif bcrypt.check_password_hash(account.Password, password):
                 user = User(account.ID, Admin=account.Admin)
                 login_user(user)
+
+                # Adiciona o ID do usuário à sessão
+                session['user_id'] = account.ID
+
                 return redirect(url_for('home.index'))
             else:
                 msg = 'Incorrect username/password!'
@@ -54,4 +56,8 @@ def login():
 @login_required
 def logout():
     logout_user()
+
+    # Remove o ID do usuário da sessão ao fazer logout
+    session.pop('user_id', None)
+
     return redirect(url_for('SigninView.login'))
