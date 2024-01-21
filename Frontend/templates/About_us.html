@@ -71,27 +71,17 @@
     <div class="container">
         <nav class="main-menu" style="height: 695px; width:250px;">
             <ul>
-<<<<<<< HEAD
                 <img src="../static/images/LOGO_PROJETO_TEN.png"
                     style="padding-left: 10px; width: 200px; height: 100px;" alt="Logo">
                 <span class="nav-text"
                     style="color: #364958; font-family: Inter; font-size: 20px;font-style: normal;font-weight: 700;line-height: normal; width:100%;text-align:center; display: inline-block;">
-=======
-                <img src="../static/images/LOGO_PROJETO_TEN.png" style="padding-left: 10px; width: 200px; height: 100px;" alt="Logo">
-                <span class="nav-text" style="color: #364958; font-family: Inter; font-size: 20px;font-style: normal;font-weight: 700;line-height: normal; width:100%;text-align:center; display: inline-block;">
->>>>>>> Sales-Teste-Implementation
                     IT on Demand
                 </span>
                 <div id="linha">
                 </div>
                 <li style="padding-top: 20%;">
-<<<<<<< HEAD
                     <a href="HomePage.html">
                         <i class="fa fa-home"></i>
-=======
-                    <a href="{{url_for('home.index')}}">
-                        <i class="fa fa-home" ></i>
->>>>>>> Sales-Teste-Implementation
                         <span class="nav-text">
                             Home Page
                         </span>
@@ -99,18 +89,13 @@
                 </li>
                 <li>
                     <a class="dropdown-btn">
-<<<<<<< HEAD
                         <i class="fa fa-boxes-stacked"></i>
-=======
-                        <i class="fa fa-boxes-stacked" ></i>
->>>>>>> Sales-Teste-Implementation
                         <span class="nav-text">
                             Products
                             <i class="fa fa-caret-down" style="position:absolute;top:10%;right:50px"></i>
                         </span>
                     </a>
                 </li>
-<<<<<<< HEAD
                 <div class="dropdown-container">
                     <ul class="nav nav-sidebar">
                         <li>
@@ -130,20 +115,6 @@
                 </div>
                 <li>
                     <a href="carrinho_compras.html">
-=======
-              <div class="dropdown-container">
-                <ul class="nav nav-sidebar">
-                  <li>
-                    <i class="fa fa-laptop"><a href="{{url_for('computers.index')}}" class="links-dropdown" style="padding-left:10px;">Computers</a></i><p>
-                    <i class="fa fa-keyboard-o" style="padding-left:1px;"><a href="{{url_for('keyboards.index')}}" class="links-dropdown" style="padding-left:12px;">Keybords</a></i><p>
-                    <i class="fa fa-mouse" style="padding-left:3px;"><a href="{{url_for('mouse.index')}}" class="links-dropdown" style="padding-left:16px;">Mouses</a></i><p>
-                    <i class="fa fa-desktop"><a href="{{url_for('displays.index')}}" class="links-dropdown" style="padding-left:12px;">Screen's</a></i>
-                  </li>
-                </u>
-                </div>
-                <li>
-                    <a href="{{url_for('carrinho.shopping_cart')}}">
->>>>>>> Sales-Teste-Implementation
                         <i class="fa fa-shopping-cart"></i>
                         <span class="nav-text">
                             Shopping Cart
@@ -151,28 +122,7 @@
                     </a>
                 </li>
                 <li>
-<<<<<<< HEAD
                     <a href=""><!--Meter depois a referencia, caso utilizador caso admin-->
-=======
-                    {% if current_user.is_authenticated %}
-                        <a href="{{ url_for('AccountStateView.accountstate') }}">
-                            <i class="fa fa-user"></i>
-                            <span class="nav-text">
-                                Profile
-                            </span>
-                        </a>
-                    {% else %}
-                        <a href="{{ url_for('SigninView.login') }}">
-                            <i class="fa fa-user"></i>
-                            <span class="nav-text">
-                                Login
-                            </span>
-                        </a>
-                    {% endif %}
-                </li>
-                <li>
-                    <a href="perfil.html">
->>>>>>> Sales-Teste-Implementation
                         <i class="fa fa-user"></i>
                         <span class="nav-text ">
                             Profile
@@ -180,18 +130,13 @@
                     </a>
                 </li>
                 <li>
-<<<<<<< HEAD
                     <a href="About_us.html">
-=======
-                    <a href="utilizador_eventos.php">
->>>>>>> Sales-Teste-Implementation
                         <i class="fa fa-users"></i>
                         <span class="nav-text">
                             About Us
                         </span>
                     </a>
                 </li>
-<<<<<<< HEAD
             </ul>
             <li style="position: absolute; left: 0; bottom: 0;">
                 <div style="background-color: #CAE4CB; width:90%; height:100px; border-radius: 8px; padding-left:10px;">
@@ -208,32 +153,6 @@
                 <i
                     style="color: #1E1E1E;font-family: Inter;font-size: 15px;font-style: normal;font-weight: 500;line-height: normal;padding-left:150px;">@TEN2023</i>
             </li>
-=======
-                <li>
-                    {% if current_user.is_authenticated and current_user.Admin %}
-                    <a href="{{url_for('StaffPanel.staffpanel')}}">Admin Panel</a>
-                    {% else %}
-                    {% endif %}
-                </li>                
-                <li>
-  
-                </li>
-            </ul>
-                <li style="position: absolute; left: 0; bottom: 0;">
-                  <div style="background-color: #CAE4CB; width:90%; height:100px; border-radius: 8px; padding-left:10px;">
-                    <h4 style="padding-top:10px;">Contact Us By:</h4>
-                      <p>
-                        <strong>Email:</strong>
-                        <a href="#" style="font-size: 15px; font-weight:500;">itondemand@gmail.com</a>
-                      </p>
-                      <p>
-                        <strong>Phone:</strong>
-                        +222 222 222
-                      </p>
-                  </div>
-                  <i style="color: #1E1E1E;font-family: Inter;font-size: 15px;font-style: normal;font-weight: 500;line-height: normal;padding-left:150px;">@TEN2023</i>
-                </li>
->>>>>>> Sales-Teste-Implementation
         </nav>
 
 

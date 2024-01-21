@@ -1,5 +1,4 @@
 from flask import Blueprint, Flask, render_template
-from flask_login import current_user
 from network.DBSTUFF import connection_string
 import pyodbc
 
@@ -7,8 +6,6 @@ carrinho_bp = Blueprint('carrinho', __name__)
 
 @carrinho_bp.route('/carrinho')
 def shopping_cart():
-    if not current_user.is_authenticated:
-        return render_template('Aviso_Login.html')
     
     # Connection string
     conn = pyodbc.connect(connection_string)
