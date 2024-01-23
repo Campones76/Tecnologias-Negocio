@@ -19,7 +19,7 @@
 
 <body>
     <div class="container">
-        <nav class="main-menu" style="height: 695px; width:250px;">
+        <nav class="main-menu" style="height: 795px; width:250px;">
             <ul>
                 <img src="../static/images/LOGO_PROJETO_TEN.png" style="padding-left: 10px; width: 200px; height: 100px;" alt="Logo">
                 <span class="nav-text" style="color: #364958; font-family: Inter; font-size: 20px;font-style: normal;font-weight: 700;line-height: normal; width:100%;text-align:center; display: inline-block;">
@@ -45,7 +45,7 @@
                 </li>
                 <li>
                     {% if current_user.is_authenticated and current_user.Admin %}
-                    <a href="{{url_for('InventoryView.inventoryview')}}">MANAGE INVENTORY</a><!--InventoryView.inventory-->
+                    <a href="{{url_for('products.list_products')}}">MANAGE INVENTORY</a><!--InventoryView.inventory-->
                     {% endif %}
                 </li>
                 <li>

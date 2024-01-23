@@ -5,7 +5,6 @@ from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired, Email
 from network.DBSTUFF import connection_string
 import pyodbc
-
 from backend.forms.UpdateUserInfoForm import UpdateUserInfoForm
 
 accountupdate_bp = Blueprint('AccountUpdate', __name__)

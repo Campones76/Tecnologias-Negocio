@@ -1,11 +1,18 @@
 <!-- your_app/templates/products/edit_product.html -->
+<script type="text/javascript">
+    // Defines global variables to hold the Flask URL routes in the javascript buttons might not be the best way to do it but it works!
+    var proddesc = "{{ product.Description }}";;
+</script>
 <h2>Edit Product</h2>
 <form method="post" action="{{ url_for('products.edit_product', product_id=product.ID) }}" enctype="multipart/form-data">
     <label for="name">Name:</label>
     <input type="text" name="name" value="{{ product.Name }}" required>
     <br>
     <label for="price">Price:</label>
-    <input type="number" name="price" step="0.01" value="{{ product.Price }}" required>
+    <input type="number" name="price" step="0.01" value="{{ product.Price }}">
+    <br>
+    <label for="Quantity">Quantity:</label>
+    <input type="number" name="quantity" step="1" value="{{ inventory.Inv }}">
     <br>
     <label for="category">Category:</label>
     <select name="category" required>
@@ -16,6 +23,26 @@
     <br>
     <label for="image">Update Image:</label>
     <input type="file" name="image" accept="image/*">
+    <br>
+    <!--
+    <label for="desc">Description:</label>
+    <input type="text" name="desc" value="{{ product.Description }}" required>
+    <br>
+    -->
+    <label for="desc">Description:</label>
+    <textarea name="desc" rows="5" style="width: 100%;" required>{{ product.Description }}</textarea>
+    <br>
+    <label for="details">Details:</label>
+    <textarea name="details" rows="5" style="width: 100%;" required>{{ product.Details }}</textarea>
+    <br>
+    <label for="brand">Brand:</label>
+    <input type="text" name="brand" value="{{ product.Brand }}" required">
+    <br>
+    <label for="model">Model:</label>
+    <input type="text" name="model" value="{{ product.Model }}" required>
+    <br>
+    <label for="colour">Colour:</label>
+    <input type="text" name="colour" value="{{ product.Colour }}" required">
     <br>
     <label>Delete Product:</label>
     <input type="checkbox" name="delete_product">

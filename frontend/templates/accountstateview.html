@@ -8,7 +8,7 @@
         <form action="/login/logout">
             <input type="submit" value="Logout">
         </form>
-        <form action="/update_info" method="get">
+        <form action="{{url_for('AccountUpdate.update_info')}}" method="get">
             <input type="submit" value="Update Info">
         </form>
         <form action="/delete_account" method="post" onsubmit="return confirm('Are you sure you want to delete your account? \n(The following action is irreversible)');"</form>

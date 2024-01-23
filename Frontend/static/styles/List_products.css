@@ -1,0 +1,26 @@
+/* static/styles/main.css */
+body {
+    margin-left: 20px; /* Adjust the value as needed */
+}
+
+.container {
+    width: 80%; /* Adjust the width as needed */
+    margin: 0 auto;
+}
+
+.nav-text {
+    color: #364958;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+
+.main-menu {
+    height: 795px;
+    width: 250px;
+}

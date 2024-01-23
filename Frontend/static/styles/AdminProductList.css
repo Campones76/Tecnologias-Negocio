@@ -1,0 +1,9 @@
+/* static/AdminProductList.css */
+body {
+    margin-left: 20px; /* Adjust the value as needed */
+}
+
+.container {
+    width: 80%; /* Adjust the width as needed */
+    margin: 0 auto;
+}

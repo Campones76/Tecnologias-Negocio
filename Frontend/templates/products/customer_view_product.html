@@ -1,0 +1,120 @@
+<!-- product.html -->
+
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ product.Name }}</title>
+    <link rel="stylesheet" href="../static/styles/main.css">
+    <link rel="stylesheet" href="../static/styles/dropdown.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+    <script type="text/javascript">
+        var addToCartURL = "{{ url_for('cart.add_to_cart', product_id=product.ID, quantity=1) }}";
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        {% include 'navigation.html' %}
+
+        <div class="banner">
+            <p style="font-size:40px; padding-top:10px; color: #364958;font-family: Jockey One; padding-left:20px;">
+                <i class="fa fa-boxes-stacked" style="font-size:30px;"></i>{{ product.CatName }}<i class="fa fa-mouse"
+                    style="font-size:30px;"></i>
+            </p>
+        </div>
+
+        <p style="font-weight: bold; margin-left:20%; padding-top: 30px; color: #57828B;font-family: Jockey One;font-size: 30px;font-style: normal;line-height: normal;">
+            {{ product.Name }}
+        </p>
+
+        <div style="display: flex; flex-direction: row; width:100%; margin-top:30px;">
+            <div id="containerimg" style="margin-left:300px;">
+                <img src="../static/images/{{ product.Image }}"
+                    style=" width: 200px; height: 200px; padding-top:30px; margin-left: -77px; border: 4px solid #CAE4CB;">
+                <p style="margin-left:-63%;margin-top:5%">Price:</p>
+                <p
+                    style="margin-left:-63%; color: #87BBA2;font-family: Jockey One;font-size: 24px;font-style: normal;font-weight: 400;line-height: normal;">
+                    {{ product.Price }}€
+                </p>
+            </div>
+
+            <div class="texto_produtos">
+                <ul>
+                    <li style="white-space: pre-line;">{{ product.Description }}</li>
+                    <li>Brand: {{ product.Brand }}</li>
+                    <li>Model: {{ product.Model }}</li>
+                    <li>Color: {{ product.Colour }}</li>
+                    <br>
+                    <a href="#" data-toggle="modal" data-target="#detailsModal">Click here to see more details...</a>
+                    <!-- Add more details specific to your product -->
+                </ul>
+            </div>
+        </div>
+        
+        <button style="margin-left: 90%; margin-top: 20%; border-radius: 10px; border:0px; background: #57828B;width: 223px;height: 56px; font-size: 30px; color: #CAE4CB;" onclick="addToCart('{{ product.ID }}', 1)">Add to Cart</button>
+
+        <script>
+            function addToCart(product_id, quantity) {
+                var url = '{{ url_for("cart.add_to_cart", product_id=product.ID, quantity=1) }}';
+                window.location.href = url;
+            }
+        </script>
+
+        {% include 'idk.html' %}
+    </div>
+
+    <!-- Modal HTML -->
+    <div id="detailsModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">{{ product.Name }} - Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Use a hidden div to store the raw Markdown content -->
+                    <div id="rawMarkdown" style="display: none;">{{ product.Details }}</div>
+                    <!-- Rendered Markdown will be inserted here -->
+                    <div id="markdownContainer"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#detailsModal').on('show.bs.modal', function (event) {
+                var modal = $(this);
+
+                // Extract raw Markdown content from the hidden div
+                var markdownContent = modal.find('#rawMarkdown').text();
+
+                // Create a new Showdown converter
+                var converter = new showdown.Converter();
+
+                // Convert Markdown to HTML and insert it into the container
+                modal.find('#markdownContainer').html(converter.makeHtml(markdownContent));
+            });
+        });
+    </script>
+
+</body>
+
+</html>

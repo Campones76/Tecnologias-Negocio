@@ -1,0 +1,82 @@
+<!-- your_app/templates/cart/view_cart.html -->
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+
+    <link rel="stylesheet" href="../static/styles/main.css">
+    <link rel="stylesheet" href="../static/styles/dropdown.css">
+    <!-- bootstrap css -->
+    <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        {% include 'navigation.html' %}
+    </div>
+
+    <div class="banner" style="width:380px">
+        <p style="font-size:40px; padding-top:10px; color: #364958;font-family: Jockey One; padding-left:20px; font-weight:bold;"><i class="fa fa-cart-shopping" style="font-size:30px;" ></i>Shopping Cart</p>
+    </div>
+
+    <div style="display:flex">
+        <table style="margin-left: 19%;width: 50%;margin-top:5%;">
+            <thead>
+                <tr>
+                    <th style="text-align:center;">Nº</th>
+                    <th style="text-align:center;">Product</th>
+                    <th style="text-align:center;">Amount</th>
+                    <th style="text-align:center;">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in products %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.quantity }}</td>
+                    <td>{{ product.price }} €</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" style="border:none;padding-left:500px">Total:</td>
+                    <td>{{ total_price }} €</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div class="container_cart">
+            <p>You can also <span style="color: #364958;">BUY</span> this!</p>
+            <p>You will get an <span style="color: #364958;">EXTRA DISCOUNT</span>!</p>
+        </div>
+    </div>
+
+    <div style="display:flex">
+        <div class="container_historico" style="margin-left:20%; margin-top:10px; width:300px; height:170px;">
+            <p style="font-size:25px;">Do you have an old eletronic?<p style="font-size: 23px;">If so, give it to us and you will recieve an EXTRA VOUCHER! </p>
+        </div>
+
+        <div class="container_eletronic">
+            <p>For that, send us and email and we will explain all the details!</p>
+        </div>
+
+        <div style="margin-top:140px; margin-left:4%; font-size:16px;">
+            <input id="checkbox" type="checkbox" />
+            <label for="checkbox"> I agree to these <a href="#">Terms and Conditions</a></label>
+        </div>
+
+        <button style="margin-left: 50px; margin-top: 8%; border-radius: 10px; border:0px; background: #57828B;width: 103px;height: 56px; font-size: 30px; color: #CAE4CB;" onclick="location.href='inicio.html'">Buy</button>
+    </div>
+    {% include 'idk.html' %}
+</body>
+
+</html>

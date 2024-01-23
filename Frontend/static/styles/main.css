@@ -170,13 +170,14 @@
 }
 
 .texto_produtos {
-  height: 200px;
+  height: 200px; /*originalmente 200px mudei para as páginas dos produtos*/
   color: #87BBA2;
   font-family: Jockey One;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  margin-left: 100px; /*originalmente n existia adicionei para as páginas dos produtos*/
 
 }
 

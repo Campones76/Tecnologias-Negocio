@@ -7,6 +7,9 @@
     <label for="Price">Price:</label>
     <input type="number" name="price" step="0.01" required>
     <br>
+    <label for="Quantity">Quantity:</label>
+    <input type="number" name="quantity" step="1" required>
+    <br>
     <!-- Add the dropdown menu for product categories -->
     <label for="category">Category:</label>
     <select name="category" required>
@@ -17,6 +20,26 @@
     <br>
     <label for="image">Image:</label>
     <input type="file" name="image" accept="image/*" required>
+    <br>
+    <!--
+    <label for="desc">Description:</label>
+    <input type="text" name="desc" required>
+    <br>
+    -->
+    <label for="desc">Description:</label>
+    <textarea name="desc" rows="5" maxlength="250" style="width: 100%;" required></textarea>
+    <br>
+    <label for="details">Details:</label>
+    <textarea name="details" rows="5" maxlength="250" style="width: 100%;" required></textarea>
+    <br>
+    <label for="brand">Brand:</label>
+    <input type="text" name="brand" required">
+    <br>
+    <label for="model">Model:</label>
+    <input type="text" name="model" required>
+    <br>
+    <label for="colour">Colour:</label>
+    <input type="text" name="colour" required">
     <br>
 
     <button type="submit">Add Product</button>
