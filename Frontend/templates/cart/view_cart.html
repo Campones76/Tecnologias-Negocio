@@ -69,12 +69,25 @@
             <p>For that, send us and email and we will explain all the details!</p>
         </div>
 
-        <div style="margin-top:140px; margin-left:4%; font-size:16px;">
-            <input id="checkbox" type="checkbox" />
+        <!--<div style="margin-top:140px; margin-left:4%; font-size:16px;">
+            <input id="checkbox" type="checkbox" required>
             <label for="checkbox"> I agree to these <a href="#">Terms and Conditions</a></label>
-        </div>
+        </div>-->
 
-        <button style="margin-left: 50px; margin-top: 8%; border-radius: 10px; border:0px; background: #57828B;width: 103px;height: 56px; font-size: 30px; color: #CAE4CB;" onclick="location.href='inicio.html'">Buy</button>
+        <!-- Update the form tag in your cart.html file -->
+        <form action="/cart/purchase" method="post">
+            <!-- ... (Your existing form content) -->
+
+            <div style="margin-top:140px; margin-left:4%; font-size:16px;">
+                <input id="checkbox" type="checkbox" required>
+                <label for="checkbox"> I agree to these <a href="#">Terms and Conditions</a></label>
+            </div>
+
+            <!-- Update the Buy button to submit the form -->
+            <button type="submit" style="margin-left: 50px; margin-top: 8%; border-radius: 10px; border:0px; background: #57828B;width: 103px;height: 56px; font-size: 30px; color: #CAE4CB;">Buy</button>
+        </form>
+
+        <!--<button style="margin-left: 50px; margin-top: 8%; border-radius: 10px; border:0px; background: #57828B;width: 103px;height: 56px; font-size: 30px; color: #CAE4CB;" onclick="location.href='inicio.html'">Buy</button>-->
     </div>
     {% include 'idk.html' %}
 </body>

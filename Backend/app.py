@@ -20,7 +20,7 @@ from backend.views.SelectPC import *
 from backend.views.routes import *
 
 app = Flask(__name__, template_folder='../frontend/templates', static_folder='../frontend/static')
-app.config['SESSION_TYPE'] = 'filesystem'  # You can choose other session types
+app.config['SESSION_TYPE'] = 'filesystem'
 Session(app)
 
 

@@ -1,0 +1,9 @@
+backend==0.2.4.1
+Flask==3.0.1
+flask_bcrypt==1.0.1
+flask_login==0.6.3
+flask_session==0.6.0
+flask_wtf==1.2.1
+network==0.1
+pyodbc==5.0.1
+WTForms==3.1.2

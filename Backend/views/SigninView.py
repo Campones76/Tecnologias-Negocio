@@ -14,6 +14,18 @@ class User(UserMixin):
     def __init__(self, id, Admin):
         self.id = id
         self.Admin = Admin
+# class User(UserMixin):
+#     def __init__(self, id, username, name, email, password, telefone, nif, address, Admin, Deactivated):
+#         self.id = id
+#         self.username = username
+#         self.name = name
+#         self.email = email
+#         self.password = password
+#         self.telefone = telefone
+#         self.nif = nif
+#         self.address = address
+#         self.Admin = Admin
+#         self.Deactivated = Deactivated
 
 @login_manager.user_loader
 def load_user(user_id):

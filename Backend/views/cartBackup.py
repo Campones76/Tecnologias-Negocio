@@ -93,8 +93,7 @@ def add_to_cart(product_id, quantity):
 
 
 def cleanup_cart():
-    # Cleanup cart by removing items that have been in the cart for more than 5 minutes (gets activated if a user adds another items after the 5 minutes).
-    #Is it the best implementation? Nope, not even close, but I feel like work with celery :P
+    # Cleanup cart by removing items that have been in the cart for more than 5 minutes
     current_time = datetime.utcnow()
     cart = session.get('cart', {})
 
@@ -178,9 +177,6 @@ def purchase_items():
         with get_db() as connection:
             cursor = connection.cursor()
 
-            # Start transaction
-            connection.autocommit = False
-
             # Generate a unique Cart_ID
             cart_id = generate_unique_cart_id()
 
@@ -199,8 +195,8 @@ def purchase_items():
             # Insert data into Purchase_History table
             for purchase_id in purchase_ids:
                 cursor.execute(
-                    "INSERT INTO Purchase_History (User_ID, Purchase_ID, Review_ID, Order_Status, User_Address, Cart_ID) VALUES (?, ?, NULL, 1, ?, ?)", 
-                    (current_user.id, purchase_id, user_address, cart_id)
+                    "INSERT INTO Purchase_History (User_ID, Purchase_ID, Review_ID, Order_Status, User_Address) VALUES (?, ?, NULL, 1, ?)", 
+                    (current_user.id, purchase_id, user_address)
                 )
 
             connection.commit()
@@ -212,10 +208,5 @@ def purchase_items():
             return redirect(url_for('cart.view_cart'))
 
     except Exception as e:
-        # Rollback the transaction in case of error
-        connection.rollback()
         flash(str(e), "danger")
         return redirect(url_for('cart.view_cart'))
-    finally:
-        # Ensure that autocommit is reset
-        connection.autocommit = True
