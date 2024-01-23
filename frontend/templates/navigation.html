@@ -60,6 +60,16 @@
             {% endif %}
         </li>
         <li>
+            {% if current_user.is_authenticated %}
+                <a href="{{ url_for('favourites.view_favourites') }}">
+                    <i class="fa fa-star"></i>
+                    <span class="nav-text">
+                        Favourites
+                    </span>
+                </a>
+            {% endif %}
+        </li>
+        <li>
             <a href="{{url_for('About.index')}}">
                 <i class="fa fa-users"></i>
                 <span class="nav-text">
@@ -67,6 +77,12 @@
                 </span>
             </a>
         </li>
+        <li>
+            {% if current_user.is_authenticated %}
+            <a href="{{url_for('PH.purchase_history')}}">Purchase History</a>
+            {% else %}
+            {% endif %}
+        </li>  
         <li>
             {% if current_user.is_authenticated and current_user.Admin %}
             <a href="{{url_for('StaffPanel.staffpanel')}}">Admin Panel</a>

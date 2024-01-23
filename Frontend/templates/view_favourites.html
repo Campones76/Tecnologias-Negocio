@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Favourites</title>
+    <link rel="stylesheet" href="../static/styles/main.css">
+    <link rel="stylesheet" href="../static/styles/dropdown.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        {% include 'navigation.html' %}
+    </div>
+
+    <div class="banner">
+        <p style="font-size:40px; padding-top:10px; color: #364958; font-family: Jockey One; text-align: center; font-weight:bold;">
+            <i class="fa fa-star" style="font-size:30px;"></i> Favourites
+        </p>
+    </div>
+
+    <div style="margin:auto; width: 60%; margin-top:2%;">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th style="text-align:center;">Nº</th>
+                    <th style="text-align:center;">Product</th>
+                    <th style="text-align:center;">Price</th>
+                    <th style="text-align:center;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in favourites %}
+                <tr>
+                    <td style="text-align:center;">{{ loop.index }}</td>
+                    <td style="text-align:center;">{{ product.Name }}</td>
+                    <td style="text-align:center;">{{ product.Price }} €</td>
+                    <td style="text-align:center;">
+                        <form action="{{ url_for('favourites.toggle_favourite') }}" method="post">
+                            <input type="hidden" name="product_id" value="{{ product.ID }}">
+                            <input type="hidden" name="referrer" value="view_favourites">
+                            <button type="submit" class="btn btn-danger">Remove</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- Pagination links -->
+        <nav aria-label="Favourites navigation">
+            <ul class="pagination justify-content-center">
+                {% if current_page > 1 %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ url_for('favourites.view_favourites', page=current_page-1) }}">Previous</a>
+                </li>
+                {% endif %}
+                {% for num in range(1, total_pages + 1) %}
+                <li class="page-item {{ 'active' if num == current_page else '' }}">
+                    <a class="page-link" href="{{ url_for('favourites.view_favourites', page=num) }}">{{ num }}</a>
+                </li>
+                {% endfor %}
+                {% if current_page < total_pages %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ url_for('favourites.view_favourites', page=current_page+1) }}">Next</a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+
+    {% include 'idk.html' %}
+</body>
+
+</html>

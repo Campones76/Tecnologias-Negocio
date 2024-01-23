@@ -63,7 +63,25 @@
             </div>
         </div>
         
-        <button style="margin-left: 90%; margin-top: 20%; border-radius: 10px; border:0px; background: #57828B;width: 223px;height: 56px; font-size: 30px; color: #CAE4CB;" onclick="addToCart('{{ product.ID }}', 1)">Add to Cart</button>
+        
+        <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 20%; margin-right: 20px;">
+            <!-- Favorite Button Form -->
+            <form action="{{ url_for('favourites.toggle_favourite') }}" method="post" style="margin-right: 10px;">
+                <input type="hidden" name="product_id" value="{{ product.ID }}">
+                <button type="submit" style="background: none; border: none; padding: 0;">
+                    {% if is_favorite %}
+                        <img src="../static/images/Favourited.png" alt="Unfavorite" style="width: 24px; height: 24px;">
+                    {% else %}
+                        <img src="../static/images/Favourite.png" alt="Favorite" style="width: 24px; height: 24px;">
+                    {% endif %}
+                </button>
+            </form>
+
+            <!-- Add to Cart Button -->
+            <button onclick="addToCart('{{ product.ID }}', 1)" style="border-radius: 10px; border:0px; background: #57828B; width: 223px; height: 56px; font-size: 30px; color: #CAE4CB;">
+                Add to Cart
+            </button>
+        </div>
 
         <script>
             function addToCart(product_id, quantity) {

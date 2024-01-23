@@ -1,4 +1,3 @@
-<!-- your_app/templates/cart/view_cart.html -->
 <!DOCTYPE html>
 <html lang="pt">
 
@@ -23,7 +22,7 @@
     </div>
 
     <div class="banner" style="width:380px">
-        <p style="font-size:40px; padding-top:10px; color: #364958;font-family: Jockey One; padding-left:20px; font-weight:bold;"><i class="fa fa-cart-shopping" style="font-size:30px;" ></i>Shopping Cart</p>
+        <p style="font-size:40px; padding-top:10px; color: #364958;font-family: Jockey One; padding-left:20px; font-weight:bold;"><i class="fa fa-cart-shopping" style="font-size:30px;"></i>Shopping Cart</p>
     </div>
 
     <div style="display:flex">
@@ -69,26 +68,80 @@
             <p>For that, send us and email and we will explain all the details!</p>
         </div>
 
-        <!--<div style="margin-top:140px; margin-left:4%; font-size:16px;">
-            <input id="checkbox" type="checkbox" required>
-            <label for="checkbox"> I agree to these <a href="#">Terms and Conditions</a></label>
-        </div>-->
-
-        <!-- Update the form tag in your cart.html file -->
-        <form action="/cart/purchase" method="post">
+        <form action="/cart/purchase" method="post" style="display: flex; flex-direction: row; align-items: center;">
             <!-- ... (Your existing form content) -->
 
-            <div style="margin-top:140px; margin-left:4%; font-size:16px;">
+            <div style="display: flex; align-items: center; margin-left: 133px; margin-top: 20px; margin-bottom: -135px;">
                 <input id="checkbox" type="checkbox" required>
-                <label for="checkbox"> I agree to these <a href="#">Terms and Conditions</a></label>
+                <label for="checkbox" style="margin-left: 8px; margin-bottom: -5px; font-size: 16px;">
+                    I agree to these <a href="#" data-toggle="modal" data-target="#termsModal">Terms and Conditions</a>
+                </label>
             </div>
 
-            <!-- Update the Buy button to submit the form -->
-            <button type="submit" style="margin-left: 50px; margin-top: 8%; border-radius: 10px; border:0px; background: #57828B;width: 103px;height: 56px; font-size: 30px; color: #CAE4CB;">Buy</button>
+            <button type="submit" style="margin-top: 30px; margin-left: -312px; border-radius: 10px; border: 0px; background: #57828B; width: 103px; height: 56px; font-size: 30px; color: #CAE4CB;">Buy</button>
         </form>
-
-        <!--<button style="margin-left: 50px; margin-top: 8%; border-radius: 10px; border:0px; background: #57828B;width: 103px;height: 56px; font-size: 30px; color: #CAE4CB;" onclick="location.href='inicio.html'">Buy</button>-->
     </div>
+
+    <div id="termsModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Terms and Conditions</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    
+                    <h3>Last Updated: January 22, 2024</h3>
+
+                    <h3>1. Introduction</h3>
+                    <p>Welcome to ItOnDemand. These Terms and Conditions govern your use of our website and services. By accessing or using our service, you agree to be bound by these terms.</p>
+
+                    <h3>2. Account Information</h3>
+                    <h4>2.1 Account Creation</h4>
+                    <p>To use certain features of our service, you may need to register for an account. By creating an account, you agree to provide accurate and complete information.</p>
+
+                    <h4>2.2 Account Termination</h4>
+                    <p>You may close your account at any time. We reserve the right to suspend or terminate your account if activities occur which constitute a violation of these Terms and Conditions.</p>
+
+                    <h4>2.3 GDPR Compliance</h4>
+                    <p>In compliance with the General Data Protection Regulation (GDPR), you have the right to request the deletion of your personal data. To make a GDPR request, please delete your account in the profile settings or contact us at +222 222 222.</p>
+
+                    <h3>3. User Conduct</h3>
+                    <p>You agree not to use our services for any unlawful purpose or in any way that interrupts, damages, or impairs the service.</p>
+
+                    <h3>4. Return and Refund Policy</h3>
+                    <h4>4.1 Return of Goods</h4>
+                    <p>In compliance with EU consumer protection laws, customers have the right to return purchased goods within 14 days of receipt without giving any reason.</p>
+
+                    <h4>4.2 Refunds</h4>
+                    <p>Upon receiving the returned item, we will process your refund within a certain number of days. Refunds will be made using the same payment method used for the original purchase.</p>
+
+                    <h3>5. Limitation of Liability</h3>
+                    <p>ItOnDemand is not liable for any indirect, special, or consequential damages arising out of or in connection with the use of our service.</p>
+
+                    <h3>6. Changes to These Terms</h3>
+                    <p>We reserve the right to modify these terms at any time. We will notify users of any changes by updating the date at the top of this document.</p>
+
+                    <h3>7. Governing Law</h3>
+                    <p>These terms shall be governed by and construed in accordance with the laws of Portugal.</p>
+
+                    <h3>8. Contact Us</h3>
+                    <p>If you have any questions about these Terms, please contact us at +222 222 222.</p>
+
+                    <hr>
+
+                    <p>ItOnDemand © 2024</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     {% include 'idk.html' %}
 </body>
 

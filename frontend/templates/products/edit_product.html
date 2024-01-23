@@ -6,13 +6,13 @@
 <h2>Edit Product</h2>
 <form method="post" action="{{ url_for('products.edit_product', product_id=product.ID) }}" enctype="multipart/form-data">
     <label for="name">Name:</label>
-    <input type="text" name="name" value="{{ product.Name }}" required>
+    <input type="text" name="name" value="{{ product.Name }}" >
     <br>
     <label for="price">Price:</label>
-    <input type="number" name="price" step="0.01" value="{{ product.Price }}">
+    <input type="number" name="price" step="0.01">
     <br>
     <label for="Quantity">Quantity:</label>
-    <input type="number" name="quantity" step="1" value="{{ inventory.Inv }}">
+    <input type="number" name="quantity" step="1" value="{{ inventory_count }}">
     <br>
     <label for="category">Category:</label>
     <select name="category" required>

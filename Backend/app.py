@@ -5,6 +5,7 @@ from backend.views.home import *
 from backend.views.SigninView import *
 from backend.views.SignupView import *
 from backend.views.cart import *
+from backend.views.favourites import *
 from backend.views.computers import *
 from backend.views.mouse import *
 from backend.views.keyboards import *
@@ -18,6 +19,7 @@ from backend.views.StaffInventoryView import *
 from backend.views.About import *
 from backend.views.SelectPC import *
 from backend.views.routes import *
+from backend.views.PurchaseHistory import *
 
 app = Flask(__name__, template_folder='../frontend/templates', static_folder='../frontend/static')
 app.config['SESSION_TYPE'] = 'filesystem'
@@ -52,7 +54,8 @@ app.register_blueprint(about_bp)
 app.register_blueprint(selectpc_bp)
 app.register_blueprint(products_bp)
 app.register_blueprint(accountupdate_bp)
-
+app.register_blueprint(favourites_bp)
+app.register_blueprint(producthistory_bp)
 
 
 if __name__ == '__main__':
