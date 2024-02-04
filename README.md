@@ -39,3 +39,6 @@ Everything should work now!
 Feel free to fork the project if you want or need to do something similar for your class
 
 
+Final thoughts:
+A very ambitious project that I wasn't able to finish because of the dead line could've been so much more if I had a few more days but in the end I still got an 18 out of 20 so it's all good lol.
+
