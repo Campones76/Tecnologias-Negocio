@@ -18,14 +18,14 @@
     <div class="container">
         {% include 'navigation.html' %}
     </div>
-
-    <div class="banner">
-        <p style="font-size:40px; padding-top:10px; color: #364958; font-family: Jockey One; text-align: center; font-weight:bold;">
-            <i class="fa fa-star" style="font-size:30px;"></i> Favourites
+    <div class="banner" style="border: 4px solid #CAE4CB;">
+        <p style="font-size:40px; padding-top:10px; padding-right:46.5%; color: #364958; font-family: Jockey One; text-align: center; font-weight:bold;">
+            <i class="fa fa-star" style="font-size:30px;"></i>
+            Favourites
         </p>
     </div>
 
-    <div style="margin:auto; width: 60%; margin-top:2%;">
+    <div style="margin: auto; margin-right: 33%; width: 60%; margin-top:2%;">
         <table class="table table-hover">
             <thead>
                 <tr>
@@ -54,7 +54,7 @@
         </table>
 
         <!-- Pagination links -->
-        <nav aria-label="Favourites navigation">
+        <nav style="margin-left: 20.5%;" aria-label="Favourites navigation">
             <ul class="pagination justify-content-center">
                 {% if current_page > 1 %}
                 <li class="page-item">

@@ -19,10 +19,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript">
         // Defines global variables to hold the Flask URL routes in the javascript buttons might not be the best way to do it but it works!
-        var computersUrl = "{{ url_for('computers.index') }}";
-        var keyboardsUrl = "{{ url_for('keyboards.index') }}";
-        var mousesUrl = "{{ url_for('mouse.index') }}";
-        var displaysUrl = "{{ url_for('displays.index') }}";
+        var computersUrl = "{{ url_for('products.list_computers') }}";
+        var keyboardsUrl = "{{ url_for('products.list_keyboard') }}";
+        var mousesUrl = "{{ url_for('products.list_mouse') }}";
+        var displaysUrl = "{{ url_for('products.list_display') }}";
     </script>
 </head>
 
