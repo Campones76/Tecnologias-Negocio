@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Completed</title>
+</head>
+<body>
+    <h1>Purchase Completed</h1>
+    <p>Your purchase has been completed successfully.</p>
+    <p>You can download your receipt or return to the homepage.</p>
+    <a href="{{ url_for('cart.download_receipt', cart_id=cart_id) }}" class="btn btn-primary">Download Receipt</a>
+    <a href="{{ url_for('home.index') }}" class="btn btn-secondary">Go to Homepage</a>
+</body>
+</html>

@@ -9,7 +9,6 @@ from backend.views.favourites import *
 from backend.views.computers import *
 from backend.views.mouse import *
 from backend.views.keyboards import *
-from backend.views.displays import *
 from backend.views.adminchecker import *
 from backend.views.AccountStateView import *
 from backend.views.AccountInfoUpdater import *
@@ -44,7 +43,6 @@ app.register_blueprint(cart_bp)
 app.register_blueprint(computers_bp)
 app.register_blueprint(mouse_bp)
 app.register_blueprint(keyboards_bp)
-app.register_blueprint(displays_bp)
 app.register_blueprint(adminchecker_bp)
 app.register_blueprint(accountstate_bp)
 app.register_blueprint(StaffPanel_bp)
